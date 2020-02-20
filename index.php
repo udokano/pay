@@ -270,7 +270,7 @@ window.onpageshow = function() {
 
 <!-- ./PLAN04 -->
 
-<div class="cart__in">
+<div class="cart__in" id="cart__pos">
 <div class="content">
 
 <div class="cart__btn__cont">

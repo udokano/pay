@@ -7,7 +7,6 @@
   <title><?php the_title(); ?></title>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.221">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <?php wp_head();?>
 <script>
 
@@ -17,7 +16,6 @@
 
 
 /* トップページ */
-
 
 jQuery(document).ready(function(){
 jQuery("#radio__out > input").addClass("validate[required]");
@@ -40,7 +38,6 @@ window.onpageshow = function() {
 
 </head>
 <body <?php body_class(); ?> id="front__page">
-
 <div class="wrapper">
  <form action="<?php echo USCES_CART_URL ?>" method="post" id="form">
 <header class="key__visual">
@@ -246,10 +243,9 @@ window.onpageshow = function() {
     <li><span class="num_sq num__bg03">6</span>水光注射</li>
     <li><span class="num_sq num__bg03">7</span>ダブロ or ウルトラフォーマー3 </li>
   </ol>
+
          <div class="select__btn" id="move__point04"></div>
   </div><!-- ./row__left -->
-
-
 
 
   <div class="row__right pc">
@@ -274,7 +270,7 @@ window.onpageshow = function() {
 
 <!-- ./PLAN04 -->
 
-<div class="cart__in">
+<div class="cart__in" id="cart__pos">
 <div class="content">
 
 <div class="cart__btn__cont">
