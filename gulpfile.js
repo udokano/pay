@@ -3,13 +3,21 @@ var sass = require('gulp-sass'); //Sassコンパイル
 var plumber = require('gulp-plumber'); //エラー時の強制終了を防止
 var notify = require('gulp-notify'); //エラー発生時にデスクトップ通知する
 var sassGlob = require('gulp-sass-glob'); //@importの記述を簡潔にする
-var browserSync = require('browser-sync'); //ブラウザ反映
+var browserSync = require('browser-sync').create(); //ブラウザ反映
 var postcss = require('gulp-postcss'); //autoprefixerとセット
 var autoprefixer = require('autoprefixer'); //ベンダープレフィックス付与
 var cssdeclsort = require('css-declaration-sorter'); //css並べ替え
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var mozjpeg = require('imagemin-mozjpeg');
+
+
+/*
+WP用
+
+動的サイトでも自動リロードさせる
+
+-----------------------------------------*/
 
 
 // scssのコンパイル
@@ -35,29 +43,28 @@ gulp.task('sass', function () {
 
 // 保存時のリロード
 gulp.task('browser-sync', function (done) {
-    browserSync.init({
-
-        //ローカル開発
-        server: {
-            baseDir: "./",
-            index: "index.php"
-        }
-    });
-    done();
+    const browserSyncOption = {
+        proxy: "http://pay/"
+    }
+    browserSync.init(browserSyncOption)
+    done()
 });
+
+
 
 gulp.task('bs-reload', function (done) {
     browserSync.reload();
-    done();
+    done()
 });
 
 
 
 // 監視
 gulp.task('watch', function (done) {
-    gulp.watch('./scss/**/*.scss', gulp.task('sass')); //sassが更新されたらgulp sassを実行
-    gulp.watch('./scss/**/*.scss', gulp.task('bs-reload')); //sassが更新されたらbs-reloadを実行
-    gulp.watch('./js/*.js', gulp.task('bs-reload')); //jsが更新されたらbs-relaodを実行
+    gulp.watch('./scss/**/*.scss', gulp.task('sass'));
+    gulp.watch('./scss/**/*.scss', gulp.task('bs-reload'));
+    gulp.watch('./js/*.js', gulp.task('bs-reload'));
+    done()
 });
 
 // default
