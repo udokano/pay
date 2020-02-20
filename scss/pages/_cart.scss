@@ -43,11 +43,26 @@
                     &:nth-of-type(1) {
                         border-left: 1px solid #cecece;
                     }
+
+                    @media (max-width: 767px) {
+                        text-align: center !important;
+                        font-size: .61rem;
+                    }
+                }
+
+                td.aleft.productname {
+                    @media (max-width: 767px) {
+                        text-align: left !important;
+                    }
                 }
 
                 .price__txt {
                     font-size: 1.18rem;
                     font-weight: 600;
+
+                    @media (max-width: 767px) {
+                        font-size: .8rem;
+                    }
                 }
             }
         }
@@ -175,7 +190,7 @@
         input, .to_customerinfo_button {
             padding: 1.2rem 1.1rem !important;
             color: #fff;
-            background-color: #13b131;
+            background-color: $orange;
         }
 
         /*戻る系のボタン色変更*/
@@ -248,7 +263,7 @@
 
         tr {
             th, td {
-                width: 10% !important;
+                width: 12% !important;
                 padding: 0;
                 text-align: left !important;
                 white-space: normal !important;
@@ -256,6 +271,10 @@
 
             th {
                 text-align: center !important;
+            }
+
+            th.item__th {
+                width: 35% !important;
             }
 
             .num {
@@ -267,7 +286,7 @@
 
                 input[type="submit"] {
                     font-size: .5rem;
-                    padding: 2px;
+                    padding: .35rem .4rem;
                 }
             }
         }

@@ -4,7 +4,7 @@
 いらないラベル削除
 */
 
-$(".iopt_label").remove();
+jQuery(".iopt_label").remove();
 
 
 /* ラベルクラスナンバリング */

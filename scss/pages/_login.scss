@@ -14,10 +14,17 @@
         max-width: 465px;
         width: 100%;
         padding: 1.42rem 1.68rem;
+        background-color: rgb(244, 244, 244);
+        border: none;
 
         input[type="text"], input[type="password"] {
             background-color: #fff;
+            border: 1px solid #ccc;
             width: 100%;
+            line-height: 1.0;
+            padding: 0;
+            padding: .4rem .45rem;
+            border-radius: 0;
         }
 
         input.member_login_button {
@@ -33,7 +40,16 @@
             span {
                 display: block;
                 margin-bottom: .35rem;
+                font-weight: 600;
             }
+        }
+
+        a {
+            font-size: .9rem;
+            display: block;
+            margin-bottom: .28rem;
+            color: $pink;
+            font-weight: 600;
         }
 
         .forgetmenot {
@@ -62,6 +78,7 @@
 #newmember {
     .header_explanation {
         font-size: .7rem;
+        margin-bottom: 1.8rem;
 
         ul {
             li {
@@ -86,6 +103,11 @@
         tr {
             th {
                 width: 27%;
+                font-size: .9rem;
+            }
+
+            td {
+                font-size: .78rem;
             }
 
             td, th {

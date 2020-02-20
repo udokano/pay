@@ -52,6 +52,8 @@ add_image_size('thum', 600, 450, true);
 
 /*いらない項目を削除*/
 
+/* カートの中 */
+
 function correct_cart_rows($html)
 {
     $html = preg_replace('/<td class="thumbnail">(.*)<\/td>/', '', $html);
@@ -60,13 +62,16 @@ function correct_cart_rows($html)
 
     $html = preg_replace('/<td class="stock">(.*)<\/td>/', '', $html);
 
-
     return $html;
 }
 add_filter('usces_filter_cart_rows', 'correct_cart_rows', 10, 1);
 
 
-//最終確認ページのカートも同様にカスタマイズ
+add_filter('my_cart_rows', 'usces_get_cart_rowss', 10, 1);
+
+
+
+//最終確認ページのカートの表も同様にカスタマイズ
 
 function usces_filter_apply_addressform($html)
 {
@@ -77,6 +82,9 @@ function usces_filter_apply_addressform($html)
     $html = preg_replace('/<td class="action">(.*)<\/td>/', '', $html);
 
     $html = preg_replace('/<td class="stock">(.*)<\/td>/', '', $html);
+
+    $html = preg_replace('/<td class="unitprice">(.*)<\/td>/', '', $html);
+
 
 
     return $html;

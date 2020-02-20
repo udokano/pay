@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php the_title(); ?></title>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.2">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.221">
    <?php wp_head();?>
 <script>
 
@@ -17,7 +16,6 @@
 
 
 /* トップページ */
-
 
 jQuery(document).ready(function(){
 jQuery("#radio__out > input").addClass("validate[required]");
@@ -40,14 +38,13 @@ window.onpageshow = function() {
 
 </head>
 <body <?php body_class(); ?> id="front__page">
-
 <div class="wrapper">
  <form action="<?php echo USCES_CART_URL ?>" method="post" id="form">
 <header class="key__visual">
   <div class="content">
     <div class="key__visual__texts">
       <h1 class="">創輝会グループ<br>
-      <span class="bold"><em>月額</em><strong>通い補題プラン</strong></span></h1>
+      <span class="bold"><em>月額</em><strong>通い放題プラン</strong></span></h1>
       <p class="cach__text">定額で指定の施術が何度でも受けられるサービスです。<br>プランにない施術でも別途ご相談可能ですので、お気軽にスタッフまでご相談ください。</p>
     </div>
     <!-- ./key__visual__texts -->
