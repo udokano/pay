@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php the_title(); ?></title>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.2">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.221">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <?php wp_head();?>
 <script>
@@ -47,7 +47,7 @@ window.onpageshow = function() {
   <div class="content">
     <div class="key__visual__texts">
       <h1 class="">創輝会グループ<br>
-      <span class="bold"><em>月額</em><strong>通い補題プラン</strong></span></h1>
+      <span class="bold"><em>月額</em><strong>通い放題プラン</strong></span></h1>
       <p class="cach__text">定額で指定の施術が何度でも受けられるサービスです。<br>プランにない施術でも別途ご相談可能ですので、お気軽にスタッフまでご相談ください。</p>
     </div>
     <!-- ./key__visual__texts -->
@@ -246,7 +246,6 @@ window.onpageshow = function() {
     <li><span class="num_sq num__bg03">6</span>水光注射</li>
     <li><span class="num_sq num__bg03">7</span>ダブロ or ウルトラフォーマー3 </li>
   </ol>
-
          <div class="select__btn" id="move__point04"></div>
   </div><!-- ./row__left -->
 

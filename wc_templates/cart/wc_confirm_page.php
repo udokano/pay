@@ -45,7 +45,7 @@ get_header();
 				<th scope="row" class="num"><?php _e('No.', 'usces'); ?></th>
 				<!-- <th class="thumbnail">&nbsp;&nbsp;</th> -->
 				<th><?php _e('Items', 'usces'); ?></th>
-				<th class="price"><?php _e('Unit price', 'usces'); ?></th>
+			<!-- 	<th class="price"><?php _e('Unit price', 'usces'); ?></th> -->
 			<!-- 	<th class="quantity"><?php _e('Quantity', 'usces'); ?></th> -->
 				 <th class="subtotal"><?php _e('Amount', 'usces'); ?><?php usces_guid_tax(); ?></th>
 				<!-- <th class="action" colspan="2"></th> -->

@@ -872,7 +872,7 @@ h3 {
 
 #site__header .header__inner .header__logo {
   padding: 1.1rem 0;
-  width: 420px;
+  width: 560px;
 }
 
 #site__header .header__inner .header__logo a {
@@ -916,10 +916,10 @@ h3 {
   }
   #site__header .header__inner .header__logo {
     padding: 0;
-    width: 62.2vw;
+    width: 76.2vw;
   }
   #site__header .header__inner .header__logo a {
-    font-size: 1.1rem;
+    font-size: .8rem;
     line-height: 1;
   }
   #site__header .menu-trigger,
@@ -1535,7 +1535,7 @@ textarea {
 .cart__in {
   margin: auto;
   padding: 2.5rem 0;
-  width: 752px;
+  width: 630px;
 }
 
 .cart__in .cart__btn__cont {
@@ -1563,17 +1563,17 @@ textarea {
 }
 
 .cart__in .cart__btn__cont input {
-  background-color: #13b131;
+  background-color: #f07b60;
   border-radius: 80px;
   cursor: pointer;
   display: block;
   font-size: 1.82rem;
   font-weight: 600;
-  height: 136px;
-  line-height: 136px;
+  height: 106px;
+  line-height: 106px;
   padding: 0;
   position: relative;
-  width: 752px;
+  width: 630px;
   /* &:hover {
                 bottom: -5px;
                 border-bottom-width: 2px;
@@ -1581,7 +1581,7 @@ textarea {
 }
 
 .cart__in .cart__btn__cont input:hover {
-  opacity: .7;
+  bottom: -2px;
 }
 
 .cart__in .cart__btn__cont::after {
@@ -1678,9 +1678,28 @@ textarea {
   border-left: 1px solid #cecece;
 }
 
+@media (max-width: 767px) {
+  .cart__area #cart table tr th, .cart__area #cart table tr td {
+    font-size: .61rem;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart__area #cart table tr td.aleft.productname {
+    text-align: left !important;
+  }
+}
+
 .cart__area #cart table tr .price__txt {
   font-size: 1.18rem;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .cart__area #cart table tr .price__txt {
+    font-size: .8rem;
+  }
 }
 
 .cart__area #customer-info table {
@@ -1782,7 +1801,7 @@ textarea {
 }
 
 .cart__area .send input, .cart__area .send .to_customerinfo_button {
-  background-color: #13b131;
+  background-color: #f07b60;
   color: #fff;
   padding: 1.2rem 1.1rem !important;
 }
@@ -1845,10 +1864,13 @@ textarea {
     padding: 0;
     text-align: left !important;
     white-space: normal !important;
-    width: 10% !important;
+    width: 12% !important;
   }
   #cart_table tr th {
     text-align: center !important;
+  }
+  #cart_table tr th.item__th {
+    width: 35% !important;
   }
   #cart_table tr .num {
     width: 2% !important;
@@ -1858,7 +1880,7 @@ textarea {
   }
   #cart_table tr .action input[type="submit"] {
     font-size: .5rem;
-    padding: 2px;
+    padding: .35rem .4rem;
   }
 }
 
@@ -2694,6 +2716,8 @@ textarea {
 }
 
 #memberpages div.loginbox {
+  background-color: #f4f4f4;
+  border: none;
   margin-top: 0;
   max-width: 465px;
   padding: 1.42rem 1.68rem;
@@ -2702,6 +2726,11 @@ textarea {
 
 #memberpages div.loginbox input[type="text"], #memberpages div.loginbox input[type="password"] {
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  line-height: 1.0;
+  padding: 0;
+  padding: .4rem .45rem;
   width: 100%;
 }
 
@@ -2718,7 +2747,16 @@ textarea {
 
 #memberpages div.loginbox label span {
   display: block;
+  font-weight: 600;
   margin-bottom: .35rem;
+}
+
+#memberpages div.loginbox a {
+  color: #ff4876;
+  display: block;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: .28rem;
 }
 
 #memberpages div.loginbox .forgetmenot label {
@@ -2742,6 +2780,7 @@ textarea {
 
 #newmember .header_explanation {
   font-size: .7rem;
+  margin-bottom: 1.8rem;
 }
 
 #newmember .header_explanation ul li {
@@ -2763,7 +2802,12 @@ textarea {
 }
 
 #newmember .customer_form tr th {
+  font-size: .9rem;
   width: 27%;
+}
+
+#newmember .customer_form tr td {
+  font-size: .78rem;
 }
 
 #newmember .customer_form tr td, #newmember .customer_form tr th {
@@ -3044,7 +3088,7 @@ textarea {
 }
 
 .pink {
-  color: #ff3e7e !important;
+  color: #ff4876 !important;
 }
 
 .bg-blue {
@@ -3052,7 +3096,7 @@ textarea {
 }
 
 .bg-pink {
-  background-color: #ff3e7e !important;
+  background-color: #ff4876 !important;
 }
 
 .retouch__desc.desc02 {
@@ -3291,7 +3335,7 @@ textarea {
     margin-bottom: .55rem;
   }
   .retouch__simulation .retouch__simulation__flow .desc__text dd .desc__contents .desc__wrap .desc__text .tit.pink {
-    border-color: #ff3e7e;
+    border-color: #ff4876;
   }
   .retouch__simulation .retouch__simulation__flow .desc__text dd .desc__contents .desc__wrap .desc__text p {
     font-size: .5rem;

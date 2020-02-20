@@ -254,7 +254,7 @@ textarea {
 }
 
 .cart__in {
-    width: 752px;
+    width: 630px;
     padding: 2.5rem 0;
     margin: auto;
 
@@ -283,11 +283,11 @@ textarea {
         }
 
         input {
-            width: 752px;
+            width: 630px;
             display: block;
-            height: 136px;
-            line-height: 136px;
-            background-color: #13b131;
+            height: 106px;
+            line-height: 106px;
+            background-color: $orange;
 
             //border-radius: 5px 5px 9px 9px;
             border-radius: 80px;
@@ -306,7 +306,7 @@ textarea {
                 border-bottom-width: 2px;
             } */
             &:hover {
-                opacity: .7;
+                bottom: -2px;
             }
         }
 
