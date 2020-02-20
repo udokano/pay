@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.2">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.36">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -42,7 +42,18 @@ jQuery(function(){
 jQuery("#name1").addClass("validate[required]");
 jQuery("#name2").addClass("validate[required]");
 jQuery("#tel").addClass("validate[required]");
+
+/*
+戻るボタン押したらバリデーション無効化する
+-------------*/
+
+$(".back_cart_button").on("click", function() {
+  $("input").removeClass("validate[required]");
+  $("input").removeClass("validate[required,equals[mailaddress1]]");
+ $("input").removeClass("validate[required,equals[pass01]]");
 });
+});
+
 <?php endif; ?>
 
 <?php if (is_page('contact')): ?>
@@ -87,7 +98,7 @@ jQuery("#new__member__form").validationEngine('attach', {
 <?php else: ?>
   <header id="site__header" >
   <div class="header__inner flex al-cent">
-    <div class="header__logo"> <a href="<?php echo home_url('/');?>"> 創輝会サブスク課金サイト</a> </div>
+    <div class="header__logo"> <a href="<?php echo home_url('/');?>">創輝会グループ月額通い放題プラン</a> </div>
     <!-- ./header__logo -->
 
     <div class="menu-trigger" id="js-menu"> <span></span> <span></span> <span></span> </div>
