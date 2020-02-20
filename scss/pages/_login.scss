@@ -1,0 +1,175 @@
+/*
+
+ログインページ
+
+*/
+
+#memberpages {
+    .error_message {
+        text-align: center;
+    }
+
+    div.loginbox {
+        margin-top: 0;
+        max-width: 465px;
+        width: 100%;
+        padding: 1.42rem 1.68rem;
+
+        input[type="text"], input[type="password"] {
+            background-color: #fff;
+            width: 100%;
+        }
+
+        input.member_login_button {
+            display: block;
+            width: 68%;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        label {
+            width: 100%;
+
+            span {
+                display: block;
+                margin-bottom: .35rem;
+            }
+        }
+
+        .forgetmenot {
+            label {
+                vertical-align: middle;
+
+                span, input {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: auto;
+                    margin-bottom: 0;
+                }
+
+                input {
+                    margin-right: .6rem;
+                }
+
+                span {
+                    line-height: 1.0;
+                }
+            }
+        }
+    }
+}
+
+#newmember {
+    .header_explanation {
+        font-size: .7rem;
+
+        ul {
+            li {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    .customer_form {
+        input {
+            width: 100%;
+        }
+
+        input.wh40 {
+            width: 40% !important;
+
+            @media (max-width: 767px) {
+                width: 100% !important;
+            }
+        }
+
+        tr {
+            th {
+                width: 27%;
+            }
+
+            td, th {
+                vertical-align: middle;
+                padding: .78rem;
+                position: relative;
+            }
+        }
+    }
+}
+
+#memberinfo {
+    h3 {
+        font-size: 1.08rem;
+        padding: .7rem 0;
+        text-align: center;
+        background-color: rgb(247, 121, 67);
+        border: none;
+        height: auto;
+    }
+
+    table {
+        font-size: .88rem;
+
+        a {
+            color: #777;
+            font-size: 0.88rem;
+
+            @media (max-width: 767px) {
+                font-size: .62rem;
+            }
+        }
+
+        tr {
+            td, th {
+                font-size: 0.88rem !important;
+                padding: .4rem 0 !important;
+                text-align: center;
+                vertical-align: middle;
+
+                @media (max-width: 767px) {
+                    font-size: .6rem !important;
+                    padding: .35rem .38rem !important;
+                }
+            }
+
+            td.aleft {
+                text-align: left;
+            }
+        }
+    }
+
+    #customer_form {
+        margin-bottom: 1.7rem;
+
+        tr {
+            td, th {
+                text-align: left !important;
+                padding: .4rem .35rem !important;
+
+                input {
+                    width: 100%;
+                }
+
+                input.w50, #tel {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+ /*   .back__to__btn {
+       background-color: $yellow;
+   }
+*/
+    .reave__btn {
+        background-color: #777777;
+    }
+
+    .send {
+        input {
+            margin-bottom: .8rem;
+            font-size: .8rem;
+            padding: .7rem .72rem;
+        }
+    }
+}

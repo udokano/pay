@@ -1,0 +1,149 @@
+/*
+納品の流れ
+----------------------------*/
+
+.flow__bg {
+    background-image: url(../img/flow/flow_title_bg.jpg);
+}
+
+.flow {
+    .section__inner {
+        width: 1110px;
+
+        .flow__step {
+            justify-content: flex-start;
+            margin-bottom: 4.2rem;
+            padding-bottom: .78rem;
+            border-bottom: dashed 1px #363636;
+
+            .thumb {
+                width: 34.5%;
+            }
+
+            .step__desc {
+                width: 65%;
+
+                span {
+                    display: inline-block;
+                    padding: 7px 18px 5px;
+                    background-color: #1dace8;
+                    color: #fff;
+                    font-size: 1.2rem;
+                    margin-bottom: .65rem;
+                    border-radius: 24px;
+                    font-weight: 600;
+                }
+
+                h3 {
+                    font-size: 1.22rem;
+                    border-bottom: 1px solid #b3b2b3;
+                    color: $yellow;
+                    padding-left: .45rem;
+                    padding-bottom: .45rem;
+                    margin-bottom: .7rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: .84rem;
+                    line-height: 1.78;
+                    margin-bottom: .7rem;
+                    letter-spacing: 0;
+                    padding: 0 .5rem;
+                }
+
+                .note {
+                    font-size: .52rem;
+                    text-align: left;
+                    color: #010101;
+                    margin-bottom: 0;
+                }
+            }
+
+            &:nth-child(odd) {
+                .step__desc {
+                    margin-left: 1.5%;
+                }
+            }
+
+            &:nth-child(even) {
+                .step__desc {
+                    margin-right: 1.5%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .flow {
+        div.section__inner {
+            width: 90%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .flow__step {
+                flex-flow: column;
+                margin-bottom: 3.5rem;
+                padding-bottom: .42rem;
+                border-bottom: dashed 1px #b3b2b3;
+
+                .thumb {
+                    width: 100%;
+                }
+
+                .step__desc {
+                    width: 100%;
+
+                    span {
+                        display: inline-block;
+                        padding: 5px 18px;
+                        background-color: $blue06;
+                        color: #fff;
+                        font-size: 1.2rem;
+                        margin-bottom: .8rem;
+                        border-radius: 24px;
+                    }
+
+                    h3 {
+                        font-size: 1.0rem;
+                        border-bottom: 1px solid #b3b2b3;
+                        color: $yellow;
+                        padding-left: .45rem;
+                        padding-bottom: .45rem;
+                        margin-bottom: .8rem;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-size: .75rem;
+                        margin-bottom: .9rem;
+                    }
+
+                    .note {
+                        font-size: .52rem;
+                        margin-bottom: 0.9rem;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    flex-flow: column-reverse;
+
+                    .step__desc {
+                        margin-left: 0%;
+                    }
+                }
+
+                &:nth-child(even) {
+                    .step__desc {
+                        margin-right: 0%;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

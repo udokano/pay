@@ -1,0 +1,52 @@
+/*
+プライバシーポリシー
+----------------------------*/
+.privacy {
+    .section__inner {
+        padding: 2.8rem 0 0;
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2.3rem;
+        }
+
+        p {
+            font-size: .78rem;
+            margin-bottom: 2.5rem;
+        }
+
+        dl {
+            margin-bottom: 1.3rem;
+            font-size: .9rem;
+            padding: 1.5rem 1.8rem;
+
+            dt {
+                margin-bottom: .8rem;
+                font-weight: 600;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #dedede;
+                padding-bottom: .38rem;
+            }
+
+            dd, p {
+                font-size: .82rem;
+            }
+
+            p {
+                margin-bottom: .8rem;
+            }
+
+            ul {
+                li {
+                    font-size: 0.82rem;
+                    margin-bottom: .45rem;
+
+                    span {
+                        display: inline-block;
+                        width: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

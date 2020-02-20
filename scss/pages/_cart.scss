@@ -1,0 +1,279 @@
+/*
+カートページスタイル
+-------------------------------*/
+
+#cart {
+    font-size: .74rem;
+}
+
+.customer_form {
+    width: 100%;
+}
+
+.catbox .post .entry {
+    border-bottom: none;
+}
+
+.cart__area {
+    margin-top: 30px;
+
+    /* カートページ */
+    #cart {
+        input.delButton {
+            padding: 0.35rem .48rem .33rem;
+            font-size: .78rem;
+            background-color: #d9534f;
+        }
+
+        table {
+            border: none;
+            border-color: #cecece;
+
+            tbody {
+                border-left: 1px solid #000;
+            }
+
+            tr {
+                th, td {
+                    padding: .6rem;
+                    border-color: #cecece;
+                    border-left: none;
+                    border-bottom: none;
+
+                    &:nth-of-type(1) {
+                        border-left: 1px solid #cecece;
+                    }
+                }
+
+                .price__txt {
+                    font-size: 1.18rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    /* お客様情報入力ページ */
+    #customer-info {
+        table {
+            margin-bottom: 1.5rem;
+
+            tbody {}
+
+            tr {
+                th, td {
+                    padding: .4rem .4rem;
+                    position: relative;
+
+                    .formError {
+                        top: 7px !important;
+                    }
+
+                    input {
+                        padding: 0.35rem .4rem;
+                        font-size: .68rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* 次へのボタン非表示 */
+
+    /*  #to__del {
+         .to_deliveryinfo_button {
+             display: none;
+         }
+     } */
+
+    #delivery-info {
+        table {
+            tr {
+                th, td {
+                    padding: .4rem .4rem;
+                    vertical-align: middle;
+
+                    label {
+                        vertical-align: middle;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    input {
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin-right: .45rem;
+                    }
+
+                    textarea {
+                        background-color: #f8f8f8;
+                        margin-bottom: 0;
+                        width: 100%;
+                        height: 180px;
+                    }
+
+                    dl {
+                        dt {
+                            padding: 0;
+                            margin-bottom: .4rem;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.usccart_navi {
+    .ucart {
+        margin: 0;
+        padding: .6rem 0;
+
+        li {
+            font-size: .9rem;
+        }
+
+        li.usccart_cart, li.usccart_delivery, li.usccart_customer {
+            background: none;
+            background-color: #2d417f;
+        }
+
+        li.usccart_confirm {
+            background: none;
+            background-color: #13b131;
+        }
+    }
+}
+
+#cart th, #cart td {
+    border-bottom-width: 2px !important;
+}
+
+#cart .action {
+    width: auto;
+}
+
+#inside-cart .send {
+    border: none;
+}
+
+.cart__area {
+    .send {
+        border: none !important;
+        text-align: center;
+
+        input {
+            @media (max-width: 767px) {
+                margin-bottom: .98rem;
+            }
+        }
+
+        input, .to_customerinfo_button {
+            padding: 1.2rem 1.1rem !important;
+            color: #fff;
+            background-color: #13b131;
+        }
+
+        /*戻る系のボタン色変更*/
+        input.back_cart_button, input.back_to_delivery_button, input.back_to_customer_button {
+            background-color: #666 !important;
+        }
+    }
+}
+
+.continue_shopping_button {
+    background-color: #666 !important;
+}
+
+#cart_completion {
+    h1 {
+        font-size: 2.0rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .thanks__note {
+        font-size: .78rem;
+
+        .note__inner {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 1.1rem;
+
+            a {
+                color: #000;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cart__area {
+        margin-top: 116px;
+
+        .section__inner {
+            width: 96%;
+        }
+    }
+
+    .usccart_navi {
+        .ucart {
+            li {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    #customer-info .customer_form input {
+        width: 100% !important;
+    }
+
+    #customer-info th, #customer-info td {
+        padding: 12px 10px !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+
+    #cart_table {
+        box-sizing: border-box;
+        font-size: .39rem;
+
+        .item {
+            width: 26% !important;
+        }
+
+        tr {
+            th, td {
+                width: 10% !important;
+                padding: 0;
+                text-align: left !important;
+                white-space: normal !important;
+            }
+
+            th {
+                text-align: center !important;
+            }
+
+            .num {
+                width: 2% !important;
+            }
+
+            .action {
+                text-align: center !important;
+
+                input[type="submit"] {
+                    font-size: .5rem;
+                    padding: 2px;
+                }
+            }
+        }
+
+        thead {
+            tr {}
+        }
+    }
+}
