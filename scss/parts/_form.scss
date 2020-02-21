@@ -237,7 +237,7 @@ textarea {
                 /* チエック後のスタイル */
 
                 label.check {
-                    box-shadow: 0 0 0 6px red;
+                    box-shadow: 0 0 0 6px $sk_pink;
                 }
 
                 @media (max-width: 767px) {

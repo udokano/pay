@@ -8,7 +8,7 @@ Template Name: プライバシーポリシー
 
 <?php echo breadcrumb_func();?>
 
-<section class="privacy">
+<section class="privacy pr__trem pages">
 <div class="section__inner">
 
 
@@ -101,7 +101,7 @@ Template Name: プライバシーポリシー
 
 <dl>
     <dt>12. 個人情報に関する問い合わせ窓口</dt>
-    <dd>連絡先：医療法人社団創輝会事務所<br>担当者：上田徹</dd>
+    <dd>連絡先：医療法人社団創輝会事務所<br>担当者： ●●</dd>
 </dl>
 
 </div><!-- ./section__inner -->

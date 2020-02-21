@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php the_title(); ?></title>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.222">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.25">
    <?php wp_head();?>
 <script>
 
