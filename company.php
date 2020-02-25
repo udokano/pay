@@ -11,7 +11,6 @@ Template Name: 会社概要
 <section class="company pages">
 <div class="section__inner">
 
-
 <h1 class="tc">特定商取引法について</h1>
 
 <div class="company__info" id="company__info">
@@ -76,7 +75,10 @@ Template Name: 会社概要
 
       <dl>
         <dt>ご解約について</dt>
-        <dd>こちらの<a href="<?php home_url('/'); ?>contact" target="_blank">お問い合わせページ</a>内のフォームに、解約の旨と会員番号を記載して送信してください。</dd>
+        <dd>こちらの<?php if (usces_is_login()): ?><!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&youken=ご解約&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>" target="_blank">
+<!-- ログアウト時はエラーするのでパラメーター外す -->
+        <?php else: ?><a href="<?php home_url('/'); ?>contact?youken=ご解約" target="_blank">
+ <?php endif; ?>お問い合わせページ</a>内のフォームに、解約の旨と会員番号を記載して送信してください。</dd>
     </dl>
 
     <dl>

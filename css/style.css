@@ -2852,12 +2852,17 @@ textarea {
   line-height: 1.0;
 }
 
-#memberpages table tbody tr {
-  /* 領主書ダウンロード横の隙間削除 */
+#memberpages .member_submenu {
+  text-align: center;
 }
 
-#memberpages table tbody tr td.retail:last-of-type {
-  display: none;
+#memberpages .member_submenu li {
+  display: inline-block;
+}
+
+#memberpages .member_submenu li a {
+  color: #ff4876;
+  font-size: .95rem;
 }
 
 #newmember .header_explanation {
@@ -2898,6 +2903,7 @@ textarea {
   vertical-align: middle;
 }
 
+/* ログインページテーブル */
 #memberinfo {
   /*   .back__to__btn {
        background-color: $yellow;
@@ -2910,11 +2916,28 @@ textarea {
   border: none;
   font-size: 1.08rem;
   height: auto;
+  margin-bottom: 2.5rem;
   padding: .7rem 0;
   text-align: center;
 }
 
+#memberinfo #member__info__table {
+  margin-bottom: 1.1rem;
+}
+
+#memberinfo #member__info__table tr th, #memberinfo #member__info__table tr td {
+  padding: .7rem 1.2rem !important;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  #memberinfo #member__info__table tr th, #memberinfo #member__info__table tr td {
+    padding: .4rem .2rem !important;
+  }
+}
+
 #memberinfo table {
+  border-collapse: collapse;
   font-size: .88rem;
 }
 
@@ -2931,7 +2954,7 @@ textarea {
 
 #memberinfo table tr td, #memberinfo table tr th {
   font-size: 0.88rem !important;
-  padding: .4rem 0 !important;
+  padding: .4rem !important;
   text-align: center;
   vertical-align: middle;
 }
@@ -2945,6 +2968,14 @@ textarea {
 
 #memberinfo table tr td.aleft {
   text-align: left;
+}
+
+#memberinfo table tbody tr {
+  /* 領主書ダウンロード横の隙間削除 */
+}
+
+#memberinfo table tbody tr td.retail:last-of-type {
+  display: none;
 }
 
 #memberinfo #customer_form {

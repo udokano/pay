@@ -62,6 +62,62 @@ function my_validation_rule($Validation, $data)
 }
   add_filter('mwform_validation_mw-wp-form-31', 'my_validation_rule', 11, 2);
 
+function my_mwform_value($value, $name)
+{
+    // $_GET['youken']があったら、name属性がyoukenの項目の初期値に設定
+    if ($name === 'youken' && !empty($_GET['youken']) && !is_array($_GET['youken'])) {
+        return $_GET['youken'];
+    }
+    return $value;
+
+    // $_GET['num']があったら、name属性がnumの項目の初期値に設定
+    if ($name === 'num' && !empty($_GET['num']) && !is_array($_GET['num'])) {
+        return $_GET['num'];
+    }
+    return $value;
+}
+add_filter('mwform_value_mw-wp-form-31', 'my_mwform_value', 10, 2);
+
+
+function my_mwform_value02($value, $name)
+{
+
+
+    // $_GET['num']があったら、name属性がnumの項目の初期値に設定
+    if ($name === 'num' && !empty($_GET['num']) && !is_array($_GET['num'])) {
+        return $_GET['num'];
+    }
+    return $value;
+}
+add_filter('mwform_value_mw-wp-form-31', 'my_mwform_value02', 10, 2);
+
+
+function my_mwform_value03($value, $name)
+{
+
+
+    // $_GET['num']があったら、name属性がnumの項目の初期値に設定
+    if ($name === 'simai' && !empty($_GET['simai']) && !is_array($_GET['simai'])) {
+        return $_GET['simai'];
+    }
+    return $value;
+}
+add_filter('mwform_value_mw-wp-form-31', 'my_mwform_value03', 10, 2);
+
+
+
+function my_mwform_value04($value, $name)
+{
+
+
+    // $_GET['num']があったら、name属性がnumの項目の初期値に設定
+    if ($name === 'mail' && !empty($_GET['mail']) && !is_array($_GET['mail'])) {
+        return $_GET['mail'];
+    }
+    return $value;
+}
+add_filter('mwform_value_mw-wp-form-31', 'my_mwform_value04', 10, 2);
+
 
 
 /*

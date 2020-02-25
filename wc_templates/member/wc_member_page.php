@@ -25,7 +25,7 @@ get_header();
 
 				<div class="whitebox">
 					<div id="memberinfo">
-					<table>
+					<table id="member__info__table">
 						<tr>
 							<th scope="row"><?php _e('member number', 'usces'); ?></th>
 							<td class="num"><?php usces_memberinfo('ID'); ?></td>

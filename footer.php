@@ -9,7 +9,8 @@
     <li><a href="<?php echo home_url('/');?>term">利用規約</a></li>
     <li><a href="<?php echo home_url('/');?>company">特定商取引法に基づく表示</a></li>
     <li><a href="<?php echo home_url('/');?>contact">お問い合わせ</a></li>
-     <li><a href="<?php echo home_url('/');?>usces-member">ログイン</a></li>
+     <li><a href="<?php echo home_url('/');?>usces-member"><?php if (usces_is_login()): ?>
+マイページ<?php else: ?>ログイン<?php endif; ?></a></li>
 
   </ul>
   <p class="tc copy">© 創輝会</p>
