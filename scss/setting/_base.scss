@@ -307,9 +307,6 @@ h3 {
 /*パンくずリスト*/
 
 .path {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
     display: table;
 
     li {
@@ -488,6 +485,10 @@ h3 {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .fw {

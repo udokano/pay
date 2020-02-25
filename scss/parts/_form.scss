@@ -237,7 +237,7 @@ textarea {
                 /* チエック後のスタイル */
 
                 label.check {
-                    box-shadow: 0 0 0 6px red;
+                    box-shadow: 0 0 0 6px $sk_pink;
                 }
 
                 @media (max-width: 767px) {
@@ -326,7 +326,7 @@ textarea {
 
 @media (max-width: 767px) {
     .cart__in {
-        padding: 4.0rem 0 2.5rem;
+        padding: 3.4rem 0 2.5rem;
         min-width: 330px;
         width: 100%;
         max-width: 580px;
@@ -342,9 +342,9 @@ textarea {
             input {
                 width: 100%;
                 display: block;
-                height: 98px;
-                line-height: 98px;
-                font-size: 1.5rem;
+                height: 49px;
+                line-height: 49px;
+                font-size: 1.1rem;
 
                 //padding-left: .5rem;
            

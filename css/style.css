@@ -301,10 +301,7 @@ h3 {
 
 /*パンくずリスト*/
 .path {
-  bottom: 10px;
   display: table;
-  position: absolute;
-  right: 0;
 }
 
 .path li {
@@ -487,6 +484,11 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .fw {
@@ -861,7 +863,8 @@ h3 {
 }
 
 #site__header {
-  background: url(../img/top/key_visual_bg.jpg) no-repeat 0% 50%/100% 100%;
+  background-image: -webkit-linear-gradient(260deg, #43e2c6, #3183d0);
+  background-image: linear-gradient(190deg, #43e2c6, #3183d0);
   height: 94px;
   position: relative;
 }
@@ -1518,8 +1521,8 @@ textarea {
 }
 
 .select__plan__area .select__plan__wrapper .content .select__btn label.check {
-  -webkit-box-shadow: 0 0 0 6px red;
-  box-shadow: 0 0 0 6px red;
+  -webkit-box-shadow: 0 0 0 6px #ff73bc;
+  box-shadow: 0 0 0 6px #ff73bc;
 }
 
 @media (max-width: 767px) {
@@ -1599,7 +1602,7 @@ textarea {
   .cart__in {
     max-width: 580px;
     min-width: 330px;
-    padding: 4.0rem 0 2.5rem;
+    padding: 3.4rem 0 2.5rem;
     width: 100%;
   }
   .cart__in .cart__btn__cont {
@@ -1611,9 +1614,9 @@ textarea {
   }
   .cart__in .cart__btn__cont input {
     display: block;
-    font-size: 1.5rem;
-    height: 98px;
-    line-height: 98px;
+    font-size: 1.1rem;
+    height: 49px;
+    line-height: 49px;
     width: 100%;
   }
   .cart__in .cart__btn__cont::after {
@@ -1889,15 +1892,20 @@ textarea {
 ----------------------------*/
 .company {
   background-color: #fbfbfb;
-}
-
-.company .section__inner {
-  padding: 2.8rem 0 0;
-  width: 100%;
+  padding: 2.8rem 0;
 }
 
 .company .section__inner .company__info {
   margin-bottom: 3.5rem;
+}
+
+@media (max-width: 767px) {
+  .company .section__inner .company__info {
+    -ms-flex-flow: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    flex-flow: column;
+  }
 }
 
 .company .section__inner h1 {
@@ -1910,72 +1918,134 @@ textarea {
   margin-bottom: 2.5rem;
 }
 
-.company .section__inner dl {
+.company .section__inner .info__text {
+  margin: auto;
+  width: 79%;
+}
+
+@media (max-width: 767px) {
+  .company .section__inner .info__text {
+    width: 100%;
+  }
+}
+
+.company .section__inner .info__text dl {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
   border-bottom: 1px solid #efefef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: .7rem;
-  margin: 0 auto;
+  margin: 0 6.8rem;
   padding: 0.8rem 1.5rem;
-  width: 800px;
 }
 
-.company .section__inner dl dt {
+.company .section__inner .info__text dl dt {
   font-weight: 600;
   width: 40%;
 }
 
-.company .section__inner dl dd {
+.company .section__inner .info__text dl dd {
+  padding-left: 2.1rem;
   width: 58%;
 }
 
-.company .section__inner .map {
-  width: 100%;
+.company .section__inner .info__text dl dd a {
+  color: #b7a263;
 }
 
 @media (max-width: 767px) {
-  .company .section__inner {
-    width: 100%;
+  .company .section__inner .info__text dl {
+    margin: 0;
   }
-  .company .section__inner dl {
-    width: 90%;
+}
+
+.company .section__inner .map {
+  height: 16.2rem;
+  width: 100%;
+}
+
+.company .section__inner .map iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.clinic__list {
+  padding: 3.5rem 0;
+}
+
+.clinic__list .section__inner h2 {
+  font-size: 1.22rem;
+  margin-bottom: 1.4rem;
+}
+
+.clinic__list .section__inner .clinic__list__desc li {
+  color: #7b7b7b;
+  font-size: .60rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  width: 23.5%;
+}
+
+@media (max-width: 767px) {
+  .clinic__list .section__inner .clinic__list__desc li {
+    width: 46.8%;
   }
-  .company .section__inner dl dt {
-    margin-right: .7rem;
-    width: 35%;
-  }
-  .company .section__inner dl dd {
-    width: 60%;
-  }
-  .company .section__inner .map {
-    width: 100%;
-  }
+}
+
+.clinic__list .section__inner .clinic__list__desc li .clinic__list__tit {
+  border-bottom: 1px solid #ededed;
+  color: #454545;
+  font-size: .9rem;
+  margin-bottom: .6rem;
+  padding-bottom: .25rem;
+}
+
+.clinic__list .section__inner .clinic__list__desc li .clinic__list__name {
+  color: #b7a263;
+  font-size: .72rem;
+  margin-bottom: .5rem;
 }
 
 /*
 お問い合わせ
 ---------------------------------*/
-.pages__title.contact__bg {
-  background-image: url(../img/contact/contact_bg.jpg);
-  background-position: 50% 100%;
-  margin-bottom: 0;
+.contact__intro {
+  padding: 5.5rem 0;
+}
+
+.contact__intro .section__inner {
+  line-height: 1.98;
+}
+
+.contact__intro .section__inner h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.0rem;
+}
+
+.contact__intro .section__inner p {
+  font-size: .8rem;
+}
+
+.contact__intro .section__inner p.note {
+  margin-top: 1.2rem;
 }
 
 .contact {
-  background-color: #e3f7ff;
-  padding: 2.5rem 0;
+  background-color: #f6f4ee;
+  padding: 4.2rem 0 3.1rem;
 }
 
-.contact .section__inner {
-  background-color: #fff;
+.contact .section__inner .contact__form {
+  /*ラジオボックス偽装スタイル*/
 }
 
 .contact .section__inner .contact__form h2 {
-  background-color: #08abff;
-  color: #fff;
-  font-size: 1.27rem;
-  padding: .82rem 0;
+  color: #b7a263;
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
   text-align: center;
 }
 
@@ -1985,7 +2055,7 @@ textarea {
   display: inline-block;
   font-size: .55rem;
   margin-left: 0.7rem;
-  padding: 4px 7px 5px;
+  padding: 4px 7px 3px;
   vertical-align: middle;
 }
 
@@ -1997,52 +2067,58 @@ textarea {
   background-color: #ffa200;
 }
 
+.contact .section__inner .contact__form .sub__text {
+  color: #ff5c5c;
+  display: block;
+  font-size: .68rem;
+}
+
 .contact .section__inner .contact__form .contact__form__content {
   padding: 1.9rem 8.8rem 3.8rem;
-  /* 確認画面で注釈文変更 */
-  /*ラジオボックス偽装スタイル*/
+  /*
+                                input[type="text"], input[type="email"] {
+                                    width: 55%;
+
+                                    @media (max-width: 767px) {
+                                        width: 100%;
+                                    }
+                                }
+                 */
+}
+
+@media (max-width: 767px) {
+  .contact .section__inner .contact__form .contact__form__content dl {
+    -ms-flex-flow: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    flex-flow: column;
+  }
+}
+
+.contact .section__inner .contact__form .contact__form__content dl dt {
+  width: 40%;
+}
+
+.contact .section__inner .contact__form .contact__form__content dl dd {
+  width: 60%;
+}
+
+@media (max-width: 767px) {
+  .contact .section__inner .contact__form .contact__form__content dl dt, .contact .section__inner .contact__form .contact__form__content dl dd {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
   .contact .section__inner .contact__form .contact__form__content {
-    padding: 1.8rem;
+    padding: 1.8rem 0;
   }
-}
-
-.contact .section__inner .contact__form .contact__form__content .sub__text {
-  font-size: .8rem;
-  margin-bottom: 1.8rem;
-}
-
-.contact .section__inner .contact__form .contact__form__content .txt_confirm {
-  display: none;
-}
-
-.contact .section__inner .contact__form .contact__form__content .wpcf7-form-mode-confirm .txt_edit {
-  display: none;
-}
-
-.contact .section__inner .contact__form .contact__form__content .wpcf7-form-mode-confirm .txt_confirm {
-  display: block;
 }
 
 .contact .section__inner .contact__form .contact__form__content input[type="text"], .contact .section__inner .contact__form .contact__form__content input[type="email"], .contact .section__inner .contact__form .contact__form__content textarea {
-  background-color: #f8f8f8;
-  border: none;
-}
-
-.contact .section__inner .contact__form .contact__form__content input[type="text"].wpcf7c-conf, .contact .section__inner .contact__form .contact__form__content input[type="email"].wpcf7c-conf, .contact .section__inner .contact__form .contact__form__content textarea.wpcf7c-conf {
   background-color: #fff;
-}
-
-.contact .section__inner .contact__form .contact__form__content input[type="text"], .contact .section__inner .contact__form .contact__form__content input[type="email"] {
-  width: 55%;
-}
-
-@media (max-width: 767px) {
-  .contact .section__inner .contact__form .contact__form__content input[type="text"], .contact .section__inner .contact__form .contact__form__content input[type="email"] {
-    width: 100%;
-  }
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
 .contact .section__inner .contact__form .contact__form__content textarea {
@@ -2050,24 +2126,18 @@ textarea {
 }
 
 .contact .section__inner .contact__form .contact__form__content input[type="text"]:focus, .contact .section__inner .contact__form .contact__form__content input[type="email"]:focus, .contact .section__inner .contact__form .contact__form__content textarea:focus {
-  border: #67b2ec 1px solid;
+  border: #b7a263 1px solid;
 }
 
 .contact .section__inner .contact__form .contact__form__content input[type="text"].wpcf7c-conf:focus, .contact .section__inner .contact__form .contact__form__content input[type="email"].wpcf7c-conf:focus, .contact .section__inner .contact__form .contact__form__content textarea.wpcf7c-conf:focus {
   border: none;
 }
 
-.contact .section__inner .contact__form .contact__form__content .wpcf7-display-none {
-  display: none !important;
-}
-
-.contact .section__inner .contact__form .contact__form__content span.wpcf7-not-valid-tip {
-  display: none !important;
-}
-
 .contact .section__inner .contact__form .contact__form__content input[type="submit"], .contact .section__inner .contact__form .contact__form__content input[type="button"] {
-  background-color: #08abff;
+  background-color: #f07b60;
+  border-radius: 50px;
   color: #fff;
+  cursor: pointer;
   display: block;
   margin: auto;
   padding: 1.45rem 0;
@@ -2111,31 +2181,30 @@ textarea {
   border-bottom: none;
 }
 
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item {
+.contact .section__inner .contact__form .contact__form__content .radio dd .mwform-radio-field {
+  display: block;
+  font-size: .78rem;
   line-height: 1.0;
   margin: 0;
-  margin-bottom: .8rem;
-  margin-right: .8rem;
-  position: relative;
-}
-
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item:last-of-type {
-  margin: 0;
-}
-
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item .wpcf7-list-item-label {
-  font-size: .6rem;
-  line-height: 1.0;
-  padding: .2rem 0;
-  padding-left: 1.6rem;
+  margin-bottom: 1.2rem;
   vertical-align: middle;
   white-space: nowrap;
 }
 
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item input + .wpcf7-list-item-label::before {
+.contact .section__inner .contact__form .contact__form__content .radio dd .mwform-radio-field:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact .section__inner .contact__form .contact__form__content .radio dd .mwform-radio-field-text {
+  display: block;
+  padding-left: 2.2rem;
+  position: relative;
+}
+
+.contact .section__inner .contact__form .contact__form__content .radio dd input + .mwform-radio-field-text::before {
   -webkit-transform: translateY(-50%);
   background-color: #f8f8f8;
-  border: 1px solid #6594ac;
+  border: 1px solid #ccc;
   border-radius: 2px;
   content: "";
   display: block;
@@ -2147,7 +2216,7 @@ textarea {
   width: 20px;
 }
 
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item input + .wpcf7-list-item-label::after {
+.contact .section__inner .contact__form .contact__form__content .radio dd input + .mwform-radio-field-text::after {
   -webkit-transform: translateY(-50%) rotate(-52deg);
   border-bottom: 3px solid rgba(0, 0, 0, 0.07);
   border-left: 3px solid rgba(0, 0, 0, 0.07);
@@ -2161,8 +2230,13 @@ textarea {
   z-index: 1000;
 }
 
-.contact .section__inner .contact__form .contact__form__content .radio dd .wpcf7-list-item input:checked + .wpcf7-list-item-label::after {
-  border-color: #ff5c5c;
+.contact .section__inner .contact__form .contact__form__content .radio dd input:checked + .mwform-radio-field-text::after {
+  border-color: #f07b60;
+  content: "";
+}
+
+.contact .section__inner .contact__form .contact__form__content .radio dd input:checked + .mwform-radio-field-text::before {
+  border-color: #b7a263;
   content: "";
 }
 
@@ -2892,30 +2966,41 @@ textarea {
   padding: .7rem .72rem;
 }
 
+@media (max-width: 767px) {
+  section.pages {
+    margin-top: 4.5rem;
+  }
+}
+
 /*
 プライバシーポリシー
 ----------------------------*/
-.privacy .section__inner {
+.pr__trem .section__inner {
   padding: 2.8rem 0 0;
 }
 
-.privacy .section__inner h1 {
+.pr__trem .section__inner h1 {
   font-size: 1.8rem;
   margin-bottom: 2.3rem;
 }
 
-.privacy .section__inner p {
+.pr__trem .section__inner p {
   font-size: .78rem;
   margin-bottom: 2.5rem;
 }
 
-.privacy .section__inner dl {
+.pr__trem .section__inner p {
+  font-size: .78rem;
+  margin-bottom: 2.5rem;
+}
+
+.pr__trem .section__inner dl {
   font-size: .9rem;
   margin-bottom: 1.3rem;
   padding: 1.5rem 1.8rem;
 }
 
-.privacy .section__inner dl dt {
+.pr__trem .section__inner dl dt {
   border-bottom: 1px solid #dedede;
   font-size: 1.1rem;
   font-weight: 600;
@@ -2923,22 +3008,31 @@ textarea {
   padding-bottom: .38rem;
 }
 
-.privacy .section__inner dl dd, .privacy .section__inner dl p {
+.pr__trem .section__inner dl dd, .pr__trem .section__inner dl p {
   font-size: .82rem;
 }
 
-.privacy .section__inner dl p {
+.pr__trem .section__inner dl p {
   margin-bottom: .8rem;
 }
 
-.privacy .section__inner dl ul li {
+.pr__trem .section__inner dl ul li {
   font-size: 0.82rem;
   margin-bottom: .45rem;
 }
 
-.privacy .section__inner dl ul li span {
+.pr__trem .section__inner dl ul li span {
   display: inline-block;
   width: 2.1rem;
+}
+
+.pr__trem .section__inner dl ol {
+  padding: .9rem 1.2rem;
+}
+
+.pr__trem .section__inner dl ol li {
+  list-style: outside decimal;
+  margin-bottom: .6rem;
 }
 
 /*

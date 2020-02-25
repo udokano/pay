@@ -6,19 +6,30 @@ Template Name: お問い合わせ
 
 <?php get_header();?>
 
-<div class="pages__title contact__bg">
+
+
+<section class="contact__intro pages">
+
+<div class="section__inner tc">
 <h1>お問い合わせ</h1>
-<p>バナー制作依頼の課程で、<br>ご不明な点がございましたら、<br>
-お気軽にお問い合わせください。<br>
-※原則メールのみの対応となります。</p>
+<p>当法人の施術・料金についてのご質問や詳しい情報等をご希望の際は、<br class="pc">以下のフォームにより簡単にお問い合わせいただけます。<br class="pc">後日担当者より折り返しご連絡いたします。</p>
+
+<p class="note">※ご解約希望の方も、以下のフォームより、その旨を記載して送信のほどをお願いいたします。</p>
 <?php echo breadcrumb_func();?>
-</div><!-- ./pages__title -->
+
+</div>
+
+</section>
 
 
 
 
-<section class="contact">
+
+
+
+<section class="contact ">
 <div class="section__inner">
+
 
 
 <div class="contact__form">
@@ -26,7 +37,8 @@ Template Name: お問い合わせ
 
 <div class="contact__form__content">
 
-<?php echo do_shortcode('[contact-form-7 id="56" title="お問い合わせ"]');?>
+<?php echo do_shortcode('[mwform_formkey key="31"]');?>
+
 
 </div>
 <!-- ./contact__form__content -->
@@ -42,6 +54,15 @@ Template Name: お問い合わせ
 </div><!-- ./section__inner -->
 </section>
 
+
+<script>
+if ( $('.mw_wp_form .error')[0] ) {
+	var errorEl = $('.mw_wp_form .error').eq(0);
+	var position = errorEl.parent().offset().top;
+
+	$('body,html').delay(200).animate({scrollTop:position - 40}, 600, 'swing');
+}
+    </script>
 
 
 

@@ -4,7 +4,7 @@
 
 <?php echo breadcrumb_func();?>
 
-<section class="privacy">
+<section class="privacy pages">
 <div class="section__inner">
 
 

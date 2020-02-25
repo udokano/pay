@@ -29,6 +29,10 @@ jQuery(function ($) {
   });
 
 
+  jQuery("#select__shop select").attr("id", "select__shop__list");
+
+
+
 
   /* -----
 
@@ -48,10 +52,20 @@ jQuery(function ($) {
   $("#label3").prependTo("#move__point03");
   $("#label4").prependTo("#move__point04");
 
+  //FVプルダウンメニュー選択後スクロール
 
-  //ラジオボタンクリックスタイリング
+  $("#select__shop__list").on("change", function () {
+
+    const scpos = $("#scroll__pos").offset().top;
+    jQuery("html,body").animate({ scrollTop: scpos }, '500');
+  });
+
+
+  //ラジオボタンクリックスタイリング,選択後スクロール
   $("#radio__out").on("change", function () {
-    const radio = $(".iopt_radio_label")
+    const radio = $(".iopt_radio_label");
+    const scroll_pos = $("#cart__pos").offset().top;
+    jQuery("html,body").animate({ scrollTop: scroll_pos }, '500');
     if ($('[value="30%2C000%E5%86%86%E3%83%97%E3%83%A9%E3%83%B3"]').prop('checked')) {
       radio.removeClass("check");
       $("#label1").addClass("check");

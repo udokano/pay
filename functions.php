@@ -3,6 +3,10 @@
 
 /*
 JQリアルタイムバリデーション
+
+購入ページ
+
+会員登録ページに適用
 ---------------------------------*/
 
 add_action('wp_enqueue_scripts', 'my_scripts');
@@ -40,6 +44,24 @@ add_theme_support('post-thumbnails', array( 'post' ));
 //投稿サムネイルサイズ指定
 add_image_size('thumb300', 300, 220, true);
 add_image_size('thum', 600, 450, true);
+
+
+/*
+MW FORM カスタマイズ
+お問い合わせページに適用
+---------------------------------*/
+
+function my_validation_rule($Validation, $data)
+{
+    if ($data['youken'] === 'ご解約') {
+        $Validation->set_rule('num', 'noEmpty', array(
+          'message' => 'ご解約希望の方は、会員番号を入力してください。'
+        ));
+    }
+    return $Validation;
+}
+  add_filter('mwform_validation_mw-wp-form-31', 'my_validation_rule', 11, 2);
+
 
 
 /*

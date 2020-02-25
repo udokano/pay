@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.36">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.38">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -107,7 +107,8 @@ jQuery("#new__member__form").validationEngine('attach', {
         <li><a href="<?php echo home_url('/');?>usces-cart" class="cart-view"><span>カート</span></a></li>
         <li><a href="<?php echo home_url('/');?>privacy"><span>プライバシーポリシー</span></a></li>
         <li><a href="<?php echo home_url('/');?>term"><span>利用規約</span></a></li>
-        <li><a href="<?php echo home_url('/');?>company"><span>特定商取引法に基づく表示</span></a></li>
+        <li><a href="<?php echo home_url('/');?>company"><span>特商法について</span></a></li>
+          <li><a href="<?php echo home_url('/');?>contact">お問い合わせ</a></li>
         <li><a href="<?php echo home_url('/');?>usces-member">ログイン</a></li>
       </ul>
     </nav>

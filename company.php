@@ -8,103 +8,281 @@ Template Name: 会社概要
 
 <?php echo breadcrumb_func();?>
 
-<section class="company">
+<section class="company pages">
 <div class="section__inner">
 
 
-<h1 class="tc">会社概要</h1>
+<h1 class="tc">特定商取引法について</h1>
 
 <div class="company__info" id="company__info">
 
-    <dl>
-        <dt>会社名</dt>
-        <dd>株式会社 Udesign</dd>
-    </dl>
 
-     <dl>
-        <dt>事業内容</dt>
-        <dd>①施工全般/設計/施工PM管理/内装デザイン設計<br>
-    ②インテリア・レイアウトディレクション/デコレーション<br>
-③什器図制作/サイン施工<br>
-④Webサイト制作</dd>
+<div class="info__text">
+
+ <dl>
+        <dt>法人名</dt>
+        <dd>医療法人社団 創輝会</dd>
     </dl>
 
     <dl>
         <dt>TEL</dt>
-        <dd>03-6276-5657</dd>
+        <dd>03-6457-8243</dd>
     </dl>
 
     <dl>
         <dt>FAX</dt>
-        <dd>03-6332-9003</dd>
+        <dd>03-6457-8257</dd>
     </dl>
 
     <dl>
+        <dt>ホームページURL</dt>
+        <dd><a href="https://souki-kai.or.jp/" target="_blank">https://souki-kai.or.jp/</a></dd>
+    </dl>
+
+  <!--   <dl>
         <dt>メールアドレス</dt>
         <dd>banner@u-d.jp</dd>
-    </dl>
+    </dl> -->
 
      <dl>
         <dt>所在地</dt>
-        <dd>東京都新宿区西新宿5-18-22<br>淀橋原田ビル102</dd>
+        <dd>東京都新宿区新宿3-29-11 新盛堂ビル 7F</dd>
     </dl>
 
-</div>
-
-
-<div class="shop__about company__info">
     <dl>
-        <dt>注文方法</dt>
-        <dd>ホームページ、電子メール、ファックス</dd>
+        <dt>月額サービスの<br class="sp">販売価格</dt>
+        <dd>月額：30,000円（税別）プラン<br>月額：50,000円（税別）プラン<br>月額：70,000円（税別）プラン<br>月額：100,000円（税別）プラン</dd>
     </dl>
-     <dl>
-        <dt>お支払方法</dt>
-        <dd>銀行振込・カード決済</dd>
+
+    <dl>
+        <dt>サービス以外の<br class="sp">必要料金</dt>
+        <dd>消費税</dd>
+    </dl>
+
+    <dl>
+        <dt>お支払い方法</dt>
+        <dd>各種クレジットカード</dd>
+    </dl>
+
+    <dl>
+        <dt>お支払い時期</dt>
+        <dd>各サービスプラン購入時に最初の月額料金の請求が発生し、その後毎月同じ日に請求が行われます。</dd>
+    </dl>
+
+    <dl>
+        <dt>サービスの提供時期</dt>
+        <dd>サービスは、会員登録・クレジットカードの課金手続きが終了後、利用可能になります。</dd>
     </dl>
 
       <dl>
-        <dt>販売価格</dt>
-        <dd>注文内容によって変動します。合計金額を参照ください。</dd>
+        <dt>ご解約について</dt>
+        <dd>こちらの<a href="<?php home_url('/'); ?>contact" target="_blank">お問い合わせページ</a>内のフォームに、解約の旨と会員番号を記載して送信してください。</dd>
     </dl>
 
-     <dl>
-        <dt>商品代金以外の必要料金</dt>
-        <dd>銀行振込の場合、振込手数料、消費税</dd>
+    <dl>
+        <dt>その他条件</dt>
+        <dd>こちらの<a href="<?php home_url('/'); ?>term" target="_blank">利用規約</a>のページをご参照ください。</dd>
     </dl>
 
-        <dl>
-        <dt>納期までの日数</dt>
-        <dd>お支払確認後、7日以内にサービスの提供が可能です。
-            <span class="note">※年末年始、その他連休はこの限りではありません。</span>
-        </dd>
-    </dl>
 
-        <dl>
-        <dt>返品について</dt>
-        <dd>商品の性質上、発注後の返品や料金お支払い後の返品はお受けできません</dd>
-    </dl>
 
-        <dl>
-        <dt>免責事項</dt>
-        <dd>
-            <ul>
-              <li>・納品物に誤字脱字などの不具合がございましたら、お早めにご連絡ください。納品後１ヶ月以内は無料にて修正いたします。
-ただし仕様上の問題など、場合によっては修正に費用が発生しますのであらかじめご了承ください。</li>
-<li>・本サービスの利用は、お客様の責任においてご利用いただきます。</li>
-<li>・本サービスを利用して発生したいかなる問題も弊社は一切責任を負うものではありません。また、本サービスを利用した効果や品質を保証する物ではありません。</li>
-            </ul>
-    </dd>
-    </dl>
-</div>
+</div><!-- ./info__text -->
 
+
+</div><!-- ./company__info -->
 
 <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.5228874151419!2d139.685428208101!3d35.69260511449973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2d687fd9aad%3A0xc8678dbaa0ce6333!2z44CSMTYwLTAwMjMg5p2x5Lqs6YO95paw5a6_5Yy66KW_5paw5a6_77yV5LiB55uu77yR77yYIOilv-aWsOapi-a3gOapi-WOn-eUsOODk-ODqw!5e0!3m2!1sja!2sjp!4v1539843477396" width="100%" height="370" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.52531951615077!2d139.70256850025922!3d35.69164729728331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda3fc3befd%3A0x70c2afd78366e6f5!2z44CSMTYwLTAwMjIg5p2x5Lqs6YO95paw5a6_5Yy65paw5a6_77yT5LiB55uu77yS77yZ4oiS77yR77yRIOaWsOebm-WgguODk-ODqw!5e0!3m2!1sja!2sjp!4v1582199431142!5m2!1sja!2sjp" width="100％" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 </div>
 
-
-
 </div><!-- ./section__inner -->
+</section>
+
+
+<section class="clinic__list">
+
+
+<div class="section__inner">
+
+<h2 class="tc">クリニック一覧</h2>
+
+
+<ul class="clinic__list__desc flex flex-wrap">
+    <li>
+
+
+<p class="clinic__list__tit"> 池袋</p>
+<p class="clinic__list__name">THE MEDICAL SALON.</p>
+<p class="clicic__list__post">〒170-0013</p>
+
+<p class="clinic__list__address">東京都豊島区東池袋1-1-4 タカセセントラルビル9F</p>
+
+<p class="clinic__list__tel">0120-954-711</p>
+
+    </li>
+
+    <li>
+
+
+<p class="clinic__list__tit">渋谷</p>
+ <p class="clinic__list__name">渋谷駅前レディースクリニック</p>
+<p class="clicic__list__post">〒150-0002</p>
+
+<p class="clinic__list__address">東京都渋谷区渋谷1-24-15FPG渋谷宮益ビル7F</p>
+
+<p class="clinic__list__tel">0120-954-860</p>
+
+    </li>
+
+    <li>
+
+
+
+<p class="clinic__list__tit">渋谷</p>
+
+ <p class="clinic__list__name">YAG BEAUTY CLINIC TOKYO</p>
+
+<p class="clicic__list__post">〒150-0002</p>
+
+<p class="clinic__list__address">東京都渋谷区渋谷1-24-15 FPG渋谷宮益ビル8F</p>
+
+<p class="clinic__list__tel">0120-915-959</p>
+
+    </li>
+
+    <li>
+
+<p class="clinic__list__tit">新宿</p>
+<p class="clinic__list__name">PICO BEAUTY CLINIC</p>
+
+<p class="clicic__list__post">〒160-0022</p>
+
+<p class="clinic__list__address">東京都新宿区新宿3-17-2 アカネビル8F</p>
+
+<p class="clinic__list__tel">0120-900-253</p>
+
+    </li>
+
+    <!-- 2列目 -->
+
+    <li>
+
+<p class="clinic__list__tit">新宿</p>
+ <p class="clinic__list__name">ON Body Clinic</p>
+<p class="clicic__list__post">〒160-0022</p>
+
+<p class="clinic__list__address">東京都新宿区新宿 3-17-2 アカネビル 8F</p>
+
+<p class="clinic__list__tel">0120-972-561</p>
+
+    </li>
+
+    <li>
+
+
+
+<p class="clinic__list__tit">梅田</p>
+
+ <p class="clinic__list__name">YAG BEAUTY CLINIC OSAKA</p>
+
+<p class="clicic__list__post">〒530-0001</p>
+
+<p class="clinic__list__address">大阪府大阪市北区梅田1-12-17 梅田スクエアビル B2F</p>
+
+<p class="clinic__list__tel">0120-968-838</p>
+
+    </li>
+
+    <li>
+
+<p class="clinic__list__tit">心斎橋</p>
+<p class="clinic__list__name">Dual Clinic SHINSAIBASHI</p>
+
+<p class="clicic__list__post">〒542-0085</p>
+
+<p class="clinic__list__address">大阪府大阪市中央区心斎橋筋1丁目10-11 敬和ビル ルフレ21 10F</p>
+
+<p class="clinic__list__tel">0120-968-692</p>
+
+    </li>
+
+    <li>
+
+<p class="clinic__list__tit">心斎橋</p>
+<p class="clinic__list__name">心斎橋　レディースクリニック</p>
+
+<p class="clicic__list__post">〒542-0085</p>
+
+<p class="clinic__list__address">大阪府大阪市中央区心斎橋筋1丁目10-12 トレスビル8階</p>
+
+<p class="clinic__list__tel">0120-511-622</p>
+
+    </li>
+
+    <!-- 3列目 -->
+
+     <li>
+
+<p class="clinic__list__tit">神戸</p>
+ <p class="clinic__list__name">Dual Clinic KOBE</p>
+<p class="clicic__list__post">〒650-0037</p>
+
+<p class="clinic__list__address">兵庫県神戸市中央区明石町32 明海ビル7F</p>
+
+<p class="clinic__list__tel">0120-932-784</p>
+
+    </li>
+
+    <li>
+
+
+
+<p class="clinic__list__tit">仙台</p>
+
+ <p class="clinic__list__name">THE BEAUTY CLINIC</p>
+
+<p class="clicic__list__post">〒980-0021</p>
+
+<p class="clinic__list__address">宮城県仙台市青葉区中央1丁目3-1 AER19F</p>
+
+<p class="clinic__list__tel">0120-073-888</p>
+
+    </li>
+
+    <li>
+
+<p class="clinic__list__tit">札幌</p>
+<p class="clinic__list__name">YAG BEAUTY CLINIC SAPPORO</p>
+
+<p class="clicic__list__post">〒060-0061</p>
+
+<p class="clinic__list__address">北海道札幌市中央区南1条西4丁目 4pla 9F</p>
+
+<p class="clinic__list__tel">0120-915-378</p>
+
+    </li>
+
+    <li>
+
+<p class="clinic__list__tit">福岡</p>
+<p class="clinic__list__name">YAG BEAUTY CLINIC FUKUOKA</p>
+
+<p class="clicic__list__post">〒810-0041</p>
+
+<p class="clinic__list__address">大福岡県福岡市中央区大名１丁目１３−１９プリオ大名２ビル２階</p>
+
+<p class="clinic__list__tel">0120-657-111</p>
+
+    </li>
+</ul>
+
+
+
+
+
+</div>
+<!-- ./section__inner -->
+
 </section>
 
 
