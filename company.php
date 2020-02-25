@@ -12,14 +12,9 @@ Template Name: 会社概要
 <div class="section__inner">
 
 
-<h1 class="tc">会社概要</h1>
+<h1 class="tc">特定商取引法について</h1>
 
-<div class="company__info flex al-cent" id="company__info">
-
-
-<div class="thumb">
-<img src="<?php echo get_template_directory_uri(); ?>/img/common/office_img.jpg" alt="オフィス">
-</div>
+<div class="company__info" id="company__info">
 
 
 <div class="info__text">
@@ -39,6 +34,11 @@ Template Name: 会社概要
         <dd>03-6457-8257</dd>
     </dl>
 
+    <dl>
+        <dt>ホームページURL</dt>
+        <dd><a href="https://souki-kai.or.jp/" target="_blank">https://souki-kai.or.jp/</a></dd>
+    </dl>
+
   <!--   <dl>
         <dt>メールアドレス</dt>
         <dd>banner@u-d.jp</dd>
@@ -48,6 +48,42 @@ Template Name: 会社概要
         <dt>所在地</dt>
         <dd>東京都新宿区新宿3-29-11 新盛堂ビル 7F</dd>
     </dl>
+
+    <dl>
+        <dt>月額サービスの<br class="sp">販売価格</dt>
+        <dd>月額：30,000円（税別）プラン<br>月額：50,000円（税別）プラン<br>月額：70,000円（税別）プラン<br>月額：100,000円（税別）プラン</dd>
+    </dl>
+
+    <dl>
+        <dt>サービス以外の<br class="sp">必要料金</dt>
+        <dd>消費税</dd>
+    </dl>
+
+    <dl>
+        <dt>お支払い方法</dt>
+        <dd>各種クレジットカード</dd>
+    </dl>
+
+    <dl>
+        <dt>お支払い時期</dt>
+        <dd>各サービスプラン購入時に最初の月額料金の請求が発生し、その後毎月同じ日に請求が行われます。</dd>
+    </dl>
+
+    <dl>
+        <dt>サービスの提供時期</dt>
+        <dd>サービスは、会員登録・クレジットカードの課金手続きが終了後、利用可能になります。</dd>
+    </dl>
+
+      <dl>
+        <dt>ご解約について</dt>
+        <dd>こちらの<a href="<?php home_url('/'); ?>contact" target="_blank">お問い合わせページ</a>内のフォームに、解約の旨と会員番号を記載して送信してください。</dd>
+    </dl>
+
+    <dl>
+        <dt>その他条件</dt>
+        <dd>こちらの<a href="<?php home_url('/'); ?>term" target="_blank">利用規約</a>のページをご参照ください。</dd>
+    </dl>
+
 
 
 </div><!-- ./info__text -->

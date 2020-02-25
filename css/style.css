@@ -1918,19 +1918,9 @@ textarea {
   margin-bottom: 2.5rem;
 }
 
-.company .section__inner .thumb {
-  width: 48%;
-}
-
-@media (max-width: 767px) {
-  .company .section__inner .thumb {
-    margin-bottom: 1.2rem;
-    width: 100%;
-  }
-}
-
 .company .section__inner .info__text {
-  width: 45%;
+  margin: auto;
+  width: 79%;
 }
 
 @media (max-width: 767px) {
@@ -1940,11 +1930,15 @@ textarea {
 }
 
 .company .section__inner .info__text dl {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
   border-bottom: 1px solid #efefef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: .7rem;
+  margin: 0 6.8rem;
   padding: 0.8rem 1.5rem;
 }
 
@@ -1954,7 +1948,18 @@ textarea {
 }
 
 .company .section__inner .info__text dl dd {
+  padding-left: 2.1rem;
   width: 58%;
+}
+
+.company .section__inner .info__text dl dd a {
+  color: #b7a263;
+}
+
+@media (max-width: 767px) {
+  .company .section__inner .info__text dl {
+    margin: 0;
+  }
 }
 
 .company .section__inner .map {
