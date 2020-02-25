@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.38">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.39">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -108,8 +108,17 @@ jQuery("#new__member__form").validationEngine('attach', {
         <li><a href="<?php echo home_url('/');?>privacy"><span>プライバシーポリシー</span></a></li>
         <li><a href="<?php echo home_url('/');?>term"><span>利用規約</span></a></li>
         <li><a href="<?php echo home_url('/');?>company"><span>特商法について</span></a></li>
-          <li><a href="<?php echo home_url('/');?>contact">お問い合わせ</a></li>
-        <li><a href="<?php echo home_url('/');?>usces-member">ログイン</a></li>
+          <li>
+          <?php if (usces_is_login()): ?><!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>">
+<!-- ログアウト時はエラーするのでパラメーター外す -->
+        <?php else: ?> <a href="<?php echo home_url('/');?>contact">
+ <?php endif; ?>お問い合わせ</a></li>
+        <li>
+          <a href="<?php echo home_url('/');?>usces-member">
+<?php if (usces_is_login()): ?>
+マイページ<?php else: ?>ログイン<?php endif; ?>
+      </a>
+    </li>
       </ul>
     </nav>
     <!-- ./header__nav -->
@@ -117,4 +126,3 @@ jQuery("#new__member__form").validationEngine('attach', {
   <!-- ./header__inner -->
 </header>
 <?php endif; ?>
-
