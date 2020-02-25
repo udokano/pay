@@ -17,7 +17,7 @@
 </div>
 <!--  ./wrapper -->
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.32"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.33"></script>
 <?php wp_footer();?>
 </body>
 </html>

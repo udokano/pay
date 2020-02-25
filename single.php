@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php the_title(); ?></title>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.222">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.25">
    <?php wp_head();?>
 <script>
 
@@ -80,7 +80,7 @@ window.onpageshow = function() {
       <?php while (have_posts()) : the_post(); usces_the_item("plan"); ?>
       <?php usces_have_skus();?>
 
-<div class="shop__select__area">
+<div class="shop__select__area" id="select__shop">
 <div class="select__wrap">
 <p><span>①</span>ご利用クリニックの選択</p>
 <?php echo usces_the_itemOption("ご利用クリニック");?>
@@ -108,7 +108,7 @@ window.onpageshow = function() {
 
 <!-- PLAN01 -->
 
-<section class="select__plan__area">
+<section class="select__plan__area" id="scroll__pos">
 <div class="select__plan__wrapper">
   <div class="content flex">
 
