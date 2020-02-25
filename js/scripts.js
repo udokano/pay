@@ -28,10 +28,8 @@ jQuery(function ($) {
 
   });
 
-
+  //selectエリアID付与
   jQuery("#select__shop select").attr("id", "select__shop__list");
-
-
 
 
   /* -----
@@ -55,7 +53,6 @@ jQuery(function ($) {
   //FVプルダウンメニュー選択後スクロール
 
   $("#select__shop__list").on("change", function () {
-
     const scpos = $("#scroll__pos").offset().top;
     jQuery("html,body").animate({ scrollTop: scpos }, '500');
   });
