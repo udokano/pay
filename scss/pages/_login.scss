@@ -73,6 +73,19 @@
             }
         }
     }
+
+    table {
+        tbody {
+            tr {
+                /* 領主書ダウンロード横の隙間削除 */
+                td.retail {
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #newmember {

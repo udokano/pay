@@ -2852,6 +2852,14 @@ textarea {
   line-height: 1.0;
 }
 
+#memberpages table tbody tr {
+  /* 領主書ダウンロード横の隙間削除 */
+}
+
+#memberpages table tbody tr td.retail:last-of-type {
+  display: none;
+}
+
 #newmember .header_explanation {
   font-size: .7rem;
   margin-bottom: 1.8rem;

@@ -107,8 +107,6 @@ function usces_filter_apply_addressform($html)
 
     $html = preg_replace('/<td class="unitprice">(.*)<\/td>/', '', $html);
 
-
-
     return $html;
 }
 add_filter('usces_filter_confirm_rows', 'usces_filter_apply_addressform', 10, 1);
@@ -461,20 +459,20 @@ function my_filter_member_history($out = '')
 				<td class="purchase_price">' . usces_crform($total_price, true, false, 'return') . '</td>
 				<td class="discount">' . usces_crform($umhs['discount'], true, false, 'return') . '</td>';
             if (usces_is_tax_display() && 'products' == usces_get_tax_target()) {
-                $history_member_head .= '<td class="rightnum tax">' . usces_tax($umhs, 'return') . '</td>';
+                $history_member_head .= '<td class=" tax">' . usces_tax($umhs, 'return') . '</td>';
             }
             if (usces_is_membersystem_point() && 0 == usces_point_coverage()) {
-                $history_member_head .= '<td class="rightnum used_point">' . number_format($umhs['usedpoint']) . '</td>';
+                $history_member_head .= '<td class=" used_point">' . number_format($umhs['usedpoint']) . '</td>';
             }
             $history_member_head .= '';
             if (usces_is_tax_display() && 'all' == usces_get_tax_target()) {
-                $history_member_head .= '<td class="rightnum tax">' . usces_tax($umhs, 'return') . '</td>';
+                $history_member_head .= '<td class=" tax">' . usces_tax($umhs, 'return') . '</td>';
             }
             if (usces_is_membersystem_point() && 1 == usces_point_coverage()) {
-                $history_member_head .= '<td class="rightnum used_point">' . number_format($umhs['usedpoint']) . '</td>';
+                $history_member_head .= '<td class=" used_point">' . number_format($umhs['usedpoint']) . '</td>';
             }
             if (usces_is_membersystem_point()) {
-                $history_member_head .= '<td class="rightnum get_point">' . number_format($umhs['getpoint']) . '</td>';
+                $history_member_head .= '<td class="  get_point">' . number_format($umhs['getpoint']) . '</td>';
             }
             $history_member_head .= '</tr>';
             $html .= apply_filters('usces_filter_history_member_head', $history_member_head, $umhs);
@@ -487,8 +485,8 @@ function my_filter_member_history($out = '')
 					<th scope="row" class="cartrownum">No.</th>
 
 					<th class="productname">' . __('Items', 'usces') . '</th>
-					<th class="price">' . __('Unit price', 'usces') . '</th>
-					<th class="quantity">' . __('Quantity', 'usces') . '</th>
+
+
 					<th class="subtotal">' . __('Amount', 'usces') . '</th>
 					</tr></thead><tbody>';
             $html .= apply_filters('usces_filter_history_cart_head', $history_cart_head, $umhs);
@@ -539,8 +537,8 @@ function my_filter_member_history($out = '')
                     <td class="cartrownum">' . ($i + 1) . '</td>
 
 					<td class="aleft productname">' . $cart_item_name . '</td>
-					<td class="sprice">' . usces_crform($skuPrice, true, false, 'return') . '</td>
-					<td class="quantity">' . number_format($cart_row['quantity']) . '</td>
+
+
 					<td class="ssubtotal">' . usces_crform($skuPrice * $cart_row['quantity'], true, false, 'return') . '</td>
                     </tr>';
 
