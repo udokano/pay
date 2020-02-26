@@ -2387,7 +2387,7 @@ textarea {
 ご利用方法
 ----------------------------*/
 .sub__tit {
-  margin: 0 auto 2.25rem;
+  margin: 0 auto 2.2rem;
   max-width: 1000px;
 }
 
@@ -2399,7 +2399,7 @@ textarea {
 }
 
 .use__flow {
-  margin-bottom: 2.5rem;
+  margin-bottom: 5.8rem;
 }
 
 .use__flow .section__inner {
@@ -2444,7 +2444,7 @@ textarea {
 
 @media (max-width: 767px) {
   .use__flow .section__inner .flow__tab li {
-    font-size: .88rem;
+    font-size: .8rem;
   }
 }
 
@@ -2462,7 +2462,13 @@ textarea {
 }
 
 .use__flow .use__flow__content li .flow__steps {
-  padding: 2.5rem 0;
+  padding: 4.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps {
+    padding: 2.5rem 0;
+  }
 }
 
 .use__flow .use__flow__content li .flow__steps:nth-of-type(even) {
@@ -2500,7 +2506,7 @@ textarea {
 }
 
 .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text {
-  width: 45%;
+  width: 43%;
 }
 
 @media (max-width: 767px) {
@@ -2527,21 +2533,22 @@ textarea {
 .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text p {
   font-size: .7rem;
   line-height: 1.85;
+  margin-bottom: 1.1rem;
 }
 
 .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text p a {
   color: #ff4876;
 }
 
-.use__flow .use__flow__content li#tab02 .flow__steps {
+.use__flow .use__flow__content li.second .flow__steps {
   background-color: #f8f8f8;
 }
 
-.use__flow .use__flow__content li#tab02 .flow__steps:nth-of-type(even) {
+.use__flow .use__flow__content li.second .flow__steps:nth-of-type(even) {
   background-color: #fff;
 }
 
-.use__flow .use__flow__content li.is-show {
+.use__flow .use__flow__content li.is-active {
   height: auto;
   opacity: 1.0;
 }

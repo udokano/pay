@@ -82,15 +82,26 @@ jQuery(function ($) {
   });
 
   $('.tab__list').click(function () {
-    $('.tab__list').removeClass('is-active');
-    $(this).addClass('is-active');
-    $('.use__flow__content li').removeClass('is-show');
-    // クリックしたタブからインデックス番号を取得
-    const index = $(this).index();
-    // クリックしたタブと同じインデックス番号をもつコンテンツを表示
-    $('.use__flow__content li').eq(index).addClass('is-show');
-  });
+    //セレクタ設定
+    var thisElm = $(this);
+    var thisTabWrap = thisElm.parents('.use__flow');
+    var thisTabBtn = thisTabWrap.find('.tab__list');
+    var thisTabContents = thisTabWrap.find('.tab__content');
 
+    //current class
+    var currentClass = 'is-active';
+
+    //js-tab-btn current 切り替え
+    thisTabBtn.removeClass(currentClass);
+    thisElm.addClass(currentClass);
+
+    //クリックされた tabが何番目か取得
+    var thisElmIndex = thisTabBtn.index(this);
+
+    //js-tab-contents 切り替え
+    thisTabContents.removeClass(currentClass);
+    thisTabContents.eq(thisElmIndex).addClass(currentClass);
+  });
 
   $('.js-link').on('click', function (e) {
     e.stopPropagation();

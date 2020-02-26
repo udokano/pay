@@ -4,7 +4,7 @@
 
 .sub__tit {
     max-width: 1000px;
-    margin: 0 auto 2.25rem;
+    margin: 0 auto 2.2rem;
 
     h2 {
         color: #fff;
@@ -15,7 +15,7 @@
 }
 
 .use__flow {
-    margin-bottom: 2.5rem;
+    margin-bottom: 5.8rem;
 
     .section__inner {
         width: 1000px;
@@ -51,7 +51,7 @@
                 width: 50%;
 
                 @media (max-width: 767px) {
-                    font-size: .88rem;
+                    font-size: .8rem;
                 }
             }
 
@@ -70,7 +70,11 @@
             transition: ease-in .25s;
 
             .flow__steps {
-                padding: 2.5rem 0;
+                padding: 4.5rem 0;
+
+                @media (max-width: 767px) {
+                    padding: 2.5rem 0;
+                }
 
                 &:nth-of-type(even) {
                     background-color: #f8f8f8;
@@ -99,7 +103,7 @@
                     }
 
                     .steps__text {
-                        width: 45%;
+                        width: 43%;
 
                         @media (max-width: 767px) {
                             width: 100%;
@@ -123,6 +127,7 @@
                         p {
                             font-size: .7rem;
                             line-height: 1.85;
+                            margin-bottom: 1.1rem;
 
                             a {
                                 color: $pink;
@@ -133,7 +138,7 @@
             }
         }
 
-        li#tab02 {
+        li.second {
             .flow__steps {
                 background-color: #f8f8f8;
 
@@ -143,7 +148,7 @@
             }
         }
 
-        li.is-show {
+        li.is-active {
             height: auto;
             opacity: 1.0;
         }

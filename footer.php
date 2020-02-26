@@ -18,6 +18,6 @@
 </div>
 <!--  ./wrapper -->
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.33"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.34"></script>
 <?php wp_footer();?>
 </body></html>
