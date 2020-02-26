@@ -4,9 +4,10 @@ Template Name: 利用規約
 */
 ?>
 <?php get_header();?>
-<?php echo breadcrumb_func();?>
+
 <section class="term pr__trem pages">
   <div class="section__inner">
+    <?php echo breadcrumb_func();?>
     <h1 class="tc">
       <?php the_title(); ?>
     </h1>
@@ -169,6 +170,6 @@ Template Name: 利用規約
       </dd>
     </dl>
   </div>
-  <!-- ./section__inner --> 
+  <!-- ./section__inner -->
 </section>
 <?php get_footer();?>

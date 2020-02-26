@@ -4,9 +4,10 @@ Template Name: プライバシーポリシー
 */
 ?>
 <?php get_header();?>
-<?php echo breadcrumb_func();?>
+
 <section class="privacy pr__trem pages">
   <div class="section__inner">
+    <?php echo breadcrumb_func();?>
     <h1 class="tc">
       <?php the_title(); ?>
     </h1>
@@ -91,6 +92,6 @@ Template Name: プライバシーポリシー
         担当者： ●●</dd>
     </dl>
   </div>
-  <!-- ./section__inner --> 
+  <!-- ./section__inner -->
 </section>
 <?php get_footer();?>

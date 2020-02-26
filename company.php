@@ -4,9 +4,10 @@ Template Name: 会社概要
 */
 ?>
 <?php get_header();?>
-<?php echo breadcrumb_func();?>
+
 <section class="company pages">
   <div class="section__inner">
+    <?php echo breadcrumb_func();?>
     <h1 class="tc">特定商取引法について</h1>
     <div class="company__info" id="company__info">
       <div class="info__text">
@@ -26,12 +27,12 @@ Template Name: 会社概要
           <dt>ホームページURL</dt>
           <dd><a href="https://souki-kai.or.jp/" target="_blank">https://souki-kai.or.jp/</a></dd>
         </dl>
-        
+
         <!--   <dl>
         <dt>メールアドレス</dt>
         <dd>banner@u-d.jp</dd>
     </dl> -->
-        
+
         <dl>
           <dt>所在地</dt>
           <dd>東京都新宿区新宿3-29-11 新盛堂ビル 7F</dd>
@@ -65,7 +66,7 @@ Template Name: 会社概要
           <dt>ご解約について</dt>
           <dd>こちらの
             <?php if (usces_is_login()): ?>
-            <!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&youken=ご解約&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>" target="_blank"> 
+            <!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&youken=ご解約&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>" target="_blank">
             <!-- ログアウト時はエラーするのでパラメーター外す -->
             <?php else: ?>
             <a href="<?php home_url('/'); ?>contact?youken=ご解約" target="_blank">
@@ -77,16 +78,16 @@ Template Name: 会社概要
           <dd>こちらの<a href="<?php home_url('/'); ?>term" target="_blank">利用規約</a>のページをご参照ください。</dd>
         </dl>
       </div>
-      <!-- ./info__text --> 
-      
+      <!-- ./info__text -->
+
     </div>
     <!-- ./company__info -->
-    
+
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.52531951615077!2d139.70256850025922!3d35.69164729728331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda3fc3befd%3A0x70c2afd78366e6f5!2z44CSMTYwLTAwMjIg5p2x5Lqs6YO95paw5a6_5Yy65paw5a6_77yT5LiB55uu77yS77yZ4oiS77yR77yRIOaWsOebm-WgguODk-ODqw!5e0!3m2!1sja!2sjp!4v1582199431142!5m2!1sja!2sjp" width="100％" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
   </div>
-  <!-- ./section__inner --> 
+  <!-- ./section__inner -->
 </section>
 <section class="clinic__list">
   <div class="section__inner">
@@ -120,9 +121,9 @@ Template Name: 会社概要
         <p class="clinic__list__address">東京都新宿区新宿3-17-2 アカネビル8F</p>
         <p class="clinic__list__tel">0120-900-253</p>
       </li>
-      
+
       <!-- 2列目 -->
-      
+
       <li>
         <p class="clinic__list__tit">新宿</p>
         <p class="clinic__list__name">ON Body Clinic</p>
@@ -151,9 +152,9 @@ Template Name: 会社概要
         <p class="clinic__list__address">大阪府大阪市中央区心斎橋筋1丁目10-12 トレスビル8階</p>
         <p class="clinic__list__tel">0120-511-622</p>
       </li>
-      
+
       <!-- 3列目 -->
-      
+
       <li>
         <p class="clinic__list__tit">神戸</p>
         <p class="clinic__list__name">Dual Clinic KOBE</p>
@@ -184,7 +185,7 @@ Template Name: 会社概要
       </li>
     </ul>
   </div>
-  <!-- ./section__inner --> 
-  
+  <!-- ./section__inner -->
+
 </section>
 <?php get_footer();?>

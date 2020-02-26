@@ -302,20 +302,32 @@ h3 {
 /*パンくずリスト*/
 .path {
   display: table;
-  table-layout: fixed;
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .path {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 .path li {
-  color: #454545;
+  color: #a0a0a0;
   display: table-cell;
   font-size: .5rem;
   padding-right: .7rem;
   vertical-align: middle;
 }
 
+@media (max-width: 767px) {
+  .path li {
+    display: inline-block;
+  }
+}
+
 .path li a {
-  color: #454545;
+  color: #a0a0a0;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
   font-size: .5rem;
 }
@@ -2172,7 +2184,6 @@ textarea {
 
 .contact .section__inner .contact__form .contact__form__content dl dt {
   font-size: .92rem;
-  margin-bottom: .8rem;
 }
 
 .contact .section__inner .contact__form .contact__form__content dl:first-of-type {
@@ -3050,8 +3061,7 @@ section.pages p {
 
 @media (max-width: 767px) {
   section.pages {
-    margin-top: 4.5rem;
-    padding: 0 0 1.2rem;
+    margin-top: 1.5rem;
   }
   section.pages h1 {
     margin-bottom: 0;
@@ -3064,6 +3074,12 @@ section.pages p {
 ----------------------------*/
 .pr__trem .section__inner {
   padding: 2.8rem 0 0;
+}
+
+@media (max-width: 767px) {
+  .pr__trem .section__inner {
+    padding: 0;
+  }
 }
 
 .pr__trem .section__inner h1 {

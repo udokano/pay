@@ -309,19 +309,27 @@ h3 {
 .path {
     text-align: center;
     display: table;
-    table-layout: fixed;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        display: inline-block;
+    }
 
     li {
         display: table-cell;
         padding-right: .7rem;
-        color: #454545;
+        color: #a0a0a0;
         font-size: .5rem;
         vertical-align: middle;
+
+        @media (max-width: 767px) {
+            display: inline-block;
+        }
 
         a {
             font-size: .5rem;
             font-family: $gosic;
-            color: #454545;
+            color: #a0a0a0;
         }
 
         &:nth-of-type(2) {
