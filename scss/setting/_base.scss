@@ -307,19 +307,21 @@ h3 {
 /*パンくずリスト*/
 
 .path {
+    text-align: center;
     display: table;
+    table-layout: fixed;
 
     li {
         display: table-cell;
         padding-right: .7rem;
-        color: #fff;
+        color: #454545;
         font-size: .5rem;
         vertical-align: middle;
 
         a {
             font-size: .5rem;
             font-family: $gosic;
-            color: #fff;
+            color: #454545;
         }
 
         &:nth-of-type(2) {

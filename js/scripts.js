@@ -81,7 +81,15 @@ jQuery(function ($) {
     }
   });
 
-
+  $('.tab__list').click(function () {
+    $('.tab__list').removeClass('is-active');
+    $(this).addClass('is-active');
+    $('.use__flow__content li').removeClass('is-show');
+    // クリックしたタブからインデックス番号を取得
+    const index = $(this).index();
+    // クリックしたタブと同じインデックス番号をもつコンテンツを表示
+    $('.use__flow__content li').eq(index).addClass('is-show');
+  });
 
 
   $('.js-link').on('click', function (e) {
