@@ -302,18 +302,32 @@ h3 {
 /*パンくずリスト*/
 .path {
   display: table;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .path {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .path li {
-  color: #fff;
+  color: #a0a0a0;
   display: table-cell;
   font-size: .5rem;
   padding-right: .7rem;
   vertical-align: middle;
 }
 
+@media (max-width: 767px) {
+  .path li {
+    display: inline-block;
+  }
+}
+
 .path li a {
-  color: #fff;
+  color: #a0a0a0;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
   font-size: .5rem;
 }
@@ -2170,7 +2184,6 @@ textarea {
 
 .contact .section__inner .contact__form .contact__form__content dl dt {
   font-size: .92rem;
-  margin-bottom: .8rem;
 }
 
 .contact .section__inner .contact__form .contact__form__content dl:first-of-type {
@@ -2371,139 +2384,173 @@ textarea {
 }
 
 /*
-納品の流れ
+ご利用方法
 ----------------------------*/
-.flow__bg {
-  background-image: url(../img/flow/flow_title_bg.jpg);
+.sub__tit {
+  margin: 0 auto 2.2rem;
+  max-width: 1000px;
 }
 
-.flow .section__inner {
-  width: 1110px;
-}
-
-.flow .section__inner .flow__step {
-  -ms-flex-pack: start;
-  -webkit-box-pack: start;
-  border-bottom: dashed 1px #363636;
-  justify-content: flex-start;
-  margin-bottom: 4.2rem;
-  padding-bottom: .78rem;
-}
-
-.flow .section__inner .flow__step .thumb {
-  width: 34.5%;
-}
-
-.flow .section__inner .flow__step .step__desc {
-  width: 65%;
-}
-
-.flow .section__inner .flow__step .step__desc span {
-  background-color: #1dace8;
-  border-radius: 24px;
+.sub__tit h2 {
+  background-color: #f07b60;
   color: #fff;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: .65rem;
-  padding: 7px 18px 5px;
+  font-size: 1.25rem;
+  padding: .8rem 0;
 }
 
-.flow .section__inner .flow__step .step__desc h3 {
-  border-bottom: 1px solid #b3b2b3;
-  color: #ffa200;
-  font-size: 1.22rem;
-  font-weight: 600;
-  margin-bottom: .7rem;
-  padding-bottom: .45rem;
-  padding-left: .45rem;
+.use__flow {
+  margin-bottom: 5.8rem;
 }
 
-.flow .section__inner .flow__step .step__desc p {
-  font-size: .84rem;
-  letter-spacing: 0;
-  line-height: 1.78;
-  margin-bottom: .7rem;
-  padding: 0 .5rem;
-}
-
-.flow .section__inner .flow__step .step__desc .note {
-  color: #010101;
-  font-size: .52rem;
-  margin-bottom: 0;
-  text-align: left;
-}
-
-.flow .section__inner .flow__step:nth-child(odd) .step__desc {
-  margin-left: 1.5%;
-}
-
-.flow .section__inner .flow__step:nth-child(even) .step__desc {
-  margin-right: 1.5%;
+.use__flow .section__inner {
+  width: 1000px;
 }
 
 @media (max-width: 767px) {
-  .flow div.section__inner {
-    padding-bottom: 0;
-    padding-top: 0;
-    width: 90%;
+  .use__flow .section__inner {
+    width: 96%;
   }
-  .flow div.section__inner .flow__step {
-    -ms-flex-flow: column;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    border-bottom: dashed 1px #b3b2b3;
-    flex-flow: column;
-    margin-bottom: 3.5rem;
-    padding-bottom: .42rem;
-  }
-  .flow div.section__inner .flow__step .thumb {
+}
+
+.use__flow .section__inner p {
+  font-size: .96rem;
+}
+
+.use__flow .section__inner a {
+  color: #ff4876;
+}
+
+.use__flow .section__inner .flow__tab {
+  font-size: 0;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  width: 1000px;
+}
+
+@media (max-width: 767px) {
+  .use__flow .section__inner .flow__tab {
     width: 100%;
   }
-  .flow div.section__inner .flow__step .step__desc {
-    width: 100%;
+}
+
+.use__flow .section__inner .flow__tab li {
+  border-bottom: 2px solid #ebebeb;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.08rem;
+  padding: .8rem 1.5rem;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .use__flow .section__inner .flow__tab li {
+    font-size: .8rem;
   }
-  .flow div.section__inner .flow__step .step__desc span {
-    background-color: #2b9dd7;
-    border-radius: 24px;
-    color: #fff;
-    display: inline-block;
-    font-size: 1.2rem;
-    margin-bottom: .8rem;
-    padding: 5px 18px;
+}
+
+.use__flow .section__inner .flow__tab li.is-active {
+  border-color: #454545;
+}
+
+.use__flow .use__flow__content li {
+  -webkit-transition: ease-in .25s;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: ease-in .25s;
+  width: 100%;
+}
+
+.use__flow .use__flow__content li .flow__steps {
+  padding: 4.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps {
+    padding: 2.5rem 0;
   }
-  .flow div.section__inner .flow__step .step__desc h3 {
-    border-bottom: 1px solid #b3b2b3;
-    color: #ffa200;
-    font-size: 1.0rem;
-    font-weight: 600;
-    margin-bottom: .8rem;
-    padding-bottom: .45rem;
-    padding-left: .45rem;
+}
+
+.use__flow .use__flow__content li .flow__steps:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__inner {
+  margin: auto;
+  width: 1000px;
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps .steps__inner {
+    width: 94%;
   }
-  .flow div.section__inner .flow__step .step__desc p {
-    font-size: .75rem;
-    margin-bottom: .9rem;
-  }
-  .flow div.section__inner .flow__step .step__desc .note {
-    font-size: .52rem;
-    margin-bottom: 0.9rem;
-  }
-  .flow div.section__inner .flow__step:nth-child(odd) {
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps .steps__bottom__content {
     -ms-flex-flow: column-reverse;
     -webkit-box-direction: reverse;
     -webkit-box-orient: vertical;
     flex-flow: column-reverse;
   }
-  .flow div.section__inner .flow__step:nth-child(odd) .step__desc {
-    margin-left: 0%;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .thumb {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps .steps__bottom__content .thumb {
+    width: 100%;
   }
-  .flow div.section__inner .flow__step:nth-child(even) .step__desc {
-    margin-right: 0%;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text {
+  width: 43%;
+}
+
+@media (max-width: 767px) {
+  .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text {
+    margin-bottom: 1.5rem;
+    width: 100%;
   }
-  .flow div.section__inner .flow__step:last-child {
-    margin-bottom: 0;
-  }
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text .steps__tit {
+  border-bottom: 1px solid #ebebeb;
+  font-size: 1.15rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 10px;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text .steps__tit span {
+  color: #f07b60;
+  display: inline-block;
+  font-weight: 600;
+  margin-right: .5rem;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text p {
+  font-size: .7rem;
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+}
+
+.use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text p a {
+  color: #ff4876;
+}
+
+.use__flow .use__flow__content li.second .flow__steps {
+  background-color: #f8f8f8;
+}
+
+.use__flow .use__flow__content li.second .flow__steps:nth-of-type(even) {
+  background-color: #fff;
+}
+
+.use__flow .use__flow__content li.is-active {
+  height: auto;
+  opacity: 1.0;
 }
 
 .key__visual {
@@ -3005,9 +3052,27 @@ textarea {
   padding: .7rem .72rem;
 }
 
+section.pages {
+  padding: 2.8rem 0;
+}
+
+section.pages h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2.3rem;
+}
+
+section.pages p {
+  font-size: .62rem;
+  margin-bottom: 2.5rem;
+}
+
 @media (max-width: 767px) {
   section.pages {
-    margin-top: 4.5rem;
+    margin-top: 1.5rem;
+  }
+  section.pages h1 {
+    margin-bottom: 0;
+    margin-top: 1.2rem;
   }
 }
 
@@ -3016,6 +3081,12 @@ textarea {
 ----------------------------*/
 .pr__trem .section__inner {
   padding: 2.8rem 0 0;
+}
+
+@media (max-width: 767px) {
+  .pr__trem .section__inner {
+    padding: 0;
+  }
 }
 
 .pr__trem .section__inner h1 {
