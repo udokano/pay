@@ -2398,6 +2398,77 @@ textarea {
   padding: .8rem 0;
 }
 
+.anchor__area {
+  margin: 0 auto 3.2rem;
+  width: 1000px;
+}
+
+@media (max-width: 767px) {
+  .anchor__area {
+    width: 98%;
+  }
+}
+
+.anchor__area .anchor__links {
+  font-size: 0;
+  text-align: center;
+}
+
+.anchor__area .anchor__links li {
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+  display: inline-block;
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .anchor__area .anchor__links li {
+    width: 33.3333333%;
+  }
+}
+
+.anchor__area .anchor__links li a {
+  color: #454545;
+  display: block;
+  font-size: .88rem;
+  height: 100%;
+  padding: .25rem .5rem .95rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .anchor__area .anchor__links li a {
+    font-size: .5rem;
+    letter-spacing: 0;
+  }
+}
+
+.anchor__area .anchor__links li a::after {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  border-bottom: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+  bottom: .14rem;
+  content: "";
+  height: 12px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+}
+
+@media (max-width: 767px) {
+  .anchor__area .anchor__links li a::after {
+    height: .4rem;
+    width: .4rem;
+  }
+}
+
+.anchor__area .anchor__links li:nth-of-type(2) {
+  border: none;
+}
+
 .use__flow {
   margin-bottom: 5.8rem;
 }
@@ -2472,7 +2543,7 @@ textarea {
 }
 
 .use__flow .use__flow__content li .flow__steps:nth-of-type(even) {
-  background-color: #f8f8f8;
+  background-color: #fbfbfb;
 }
 
 .use__flow .use__flow__content li .flow__steps .steps__inner {
@@ -2518,9 +2589,9 @@ textarea {
 
 .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text .steps__tit {
   border-bottom: 1px solid #ebebeb;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   margin-bottom: 1.1rem;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .use__flow .use__flow__content li .flow__steps .steps__bottom__content .steps__text .steps__tit span {
@@ -2541,7 +2612,7 @@ textarea {
 }
 
 .use__flow .use__flow__content li.second .flow__steps {
-  background-color: #f8f8f8;
+  background-color: #fbfbfb;
 }
 
 .use__flow .use__flow__content li.second .flow__steps:nth-of-type(even) {
