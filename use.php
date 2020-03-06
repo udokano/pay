@@ -131,7 +131,7 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP6.</span>申し込み完了</h3>
-                  <p>クレジットカートの決済が無事に終了したら、『ご注文内容の確認メール』が届きます。</p><p><span class="fw600">こちらのメールは、クリニックにご来院いただく際に、必要なものなので、大切に保存するようにお願い致します。</span></p>
+                  <p>クレジットカートの決済が終了したら、『ご注文内容の確認メール』が届きます。</p><p><span class="fw600">こちらのメールは、クリニックにご来院いただく際に、必要なものなので、大切に保存するようにお願い致します。</span></p>
                   <p>また、クリニックの来院予約は<a href="https://connect-app.net/r_yag/reserve/top" target="_blank">こちらのサイト</a>から行うことが可能です。ご希望の日時・クリニックを選択してご予約くださいませ。</p>
                 </div><!-- .steps__text/ -->
               </div><!-- ./steps__bottom__content -->
@@ -342,7 +342,7 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP1.</span>お問い合わせページへ移動</h3>
-                  <p>ヘッダーまたはフッター内お問い合わせの文字列（赤色の枠の中）をクリックしてお問い合わせページに移動します。<br><?php if (usces_is_login()): ?><!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&youken=ご解約&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>" target="_blank">
+                  <p>ページ上部またはページ下部内のお問い合わせの文字列（赤色の枠の中）をクリックしてお問い合わせページに移動します。<br><?php if (usces_is_login()): ?><!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&youken=ご解約&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>" target="_blank">
 <!-- ログアウト時はエラーするのでパラメーター外す -->
         <?php else: ?>  <a href="<?php home_url('/'); ?>contact?youken=ご解約" target="_blank">
  <?php endif; ?>こちらからでも</a>、お問い合わせページへ移動できます。</p>

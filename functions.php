@@ -616,6 +616,35 @@ function my_filter_member_history($out = '')
 }
 
 
+//会員登録後のメールに会員番号・お名前・メアド・マイページURL追記
+
+add_filter('usces_filter_send_regmembermail_message', 'my_send_regmembermail_message', 10, 2);
+
+function my_send_regmembermail_message()
+{
+    global $usces;
+
+    $args = func_get_args();
+
+    $mail_data = $usces->options['mail_data'];
+
+    $user = $args[1];
+
+    $message = $mail_data['header']['membercomp'];
+
+    $message .= '会員番号：' . trim($user['ID']) . "\r\n";
+
+    $message .= 'お名前：' . trim($user['name1']) . trim($user['name2']) . "\r\n";
+
+    $message .= 'メールアドレス：' . trim($user['mailaddress1']) . "\r\n";
+
+    $message .= '会員情報ページURL：'.home_url("/").'usces-member'. "\r\n";
+
+    $message .= $mail_data['footer']['membercomp'];
+
+    return $message;
+}
+
 
 
 //レスポンシブなページネーションを作成する
@@ -658,32 +687,6 @@ function responsive_pagination($pages = '', $range = 4)
 }
 
 
-add_filter('usces_filter_send_regmembermail_message', 'my_send_regmembermail_message', 10, 2);
-
-function my_send_regmembermail_message()
-{
-    global $usces;
-
-    $args = func_get_args();
-
-    $mail_data = $usces->options['mail_data'];
-
-    $user = $args[1];
-
-    $message = $mail_data['header']['membercomp'];
-
-    $message .= '会員番号：' . trim($user['ID']) . "\r\n";
-
-    $message .= 'お名前：' . trim($user['name1']) . trim($user['name2']) . "\r\n";
-
-    $message .= 'メールアドレス：' . trim($user['mailaddress1']) . "\r\n";
-
-    $message .= '会員情報ページURL：'.home_url("/").'usces-member'. "\r\n";
-
-    $message .= $mail_data['footer']['membercomp'];
-
-    return $message;
-}
 
 
 // パンくずリスト

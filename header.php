@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>
-<?php bloginfo('name'); ?>
+<?php bloginfo('title'); ?>
 </title>
 <meta name="viewport" content="width=device-width">
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.42">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.43">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
@@ -36,12 +36,15 @@ jQuery(function(){
     jQuery("form").validationEngine();
     jQuery("#mailaddress1").addClass("validate[required]");
      jQuery("#mailaddress2").addClass("validate[required,equals[mailaddress1]]");
-       jQuery("#pass01").addClass("validate[required]");
+    jQuery("#pass01").addClass("validate[required]");
      jQuery("#pass02").addClass("validate[required,equals[pass01]]");
 
 jQuery("#name1").addClass("validate[required]");
 jQuery("#name2").addClass("validate[required]");
 jQuery("#tel").addClass("validate[required]");
+
+
+});
 
 /*
 戻るボタン押したらバリデーション無効化する
@@ -51,7 +54,6 @@ $(".back_cart_button").on("click", function() {
   $("input").removeClass("validate[required]");
   $("input").removeClass("validate[required,equals[mailaddress1]]");
  $("input").removeClass("validate[required,equals[pass01]]");
-});
 });
 
 <?php endif; ?>
