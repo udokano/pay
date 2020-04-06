@@ -9,9 +9,10 @@
 <meta name="format-detection" content="telephone=no">
 
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.43">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?var=1.1.5">
+<?php if (!is_page('usces-cart')): ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<?php endif; ?>
 <script>
 
 /*
@@ -49,11 +50,12 @@ jQuery("#tel").addClass("validate[required]");
 /*
 戻るボタン押したらバリデーション無効化する
 -------------*/
-
-$(".back_cart_button").on("click", function() {
-  $("input").removeClass("validate[required]");
-  $("input").removeClass("validate[required,equals[mailaddress1]]");
- $("input").removeClass("validate[required,equals[pass01]]");
+jQuery(function(){
+jQuery(".back_cart_button").on("click", function() {
+  jQuery("input").removeClass("validate[required]");
+  jQuery("input").removeClass("validate[required,equals[mailaddress1]]");
+ jQuery("input").removeClass("validate[required,equals[pass01]]");
+});
 });
 
 <?php endif; ?>

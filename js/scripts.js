@@ -1,4 +1,10 @@
-// 共用スクリプトスタイル記述
+/*
+
+
+FORM 関連
+
+
+-------------------------------------*/
 
 /*
 いらないラベル削除
@@ -81,45 +87,77 @@ jQuery(function ($) {
     }
   });
 
-  $('.tab__list').click(function () {
-    //セレクタ設定
-    var thisElm = $(this);
-    var thisTabWrap = thisElm.parents('.use__flow');
-    var thisTabBtn = thisTabWrap.find('.tab__list');
-    var thisTabContents = thisTabWrap.find('.tab__content');
+});
+/*
 
-    //current class
-    var currentClass = 'is-active';
+TAB MENU
 
-    //js-tab-btn current 切り替え
-    thisTabBtn.removeClass(currentClass);
-    thisElm.addClass(currentClass);
+-------------------------------------*/
 
-    //クリックされた tabが何番目か取得
-    var thisElmIndex = thisTabBtn.index(this);
+jQuery('.tab__list').click(function () {
+  //セレクタ設定
+  var thisElm = $(this);
+  var thisTabWrap = thisElm.parents('.use__flow');
+  var thisTabBtn = thisTabWrap.find('.tab__list');
+  var thisTabContents = thisTabWrap.find('.tab__content');
 
-    //js-tab-contents 切り替え
-    thisTabContents.removeClass(currentClass);
-    thisTabContents.eq(thisElmIndex).addClass(currentClass);
+  //current class
+  var currentClass = 'is-active';
+
+  //js-tab-btn current 切り替え
+  thisTabBtn.removeClass(currentClass);
+  thisElm.addClass(currentClass);
+
+  //クリックされた tabが何番目か取得
+  var thisElmIndex = thisTabBtn.index(this);
+
+  //js-tab-contents 切り替え
+  thisTabContents.removeClass(currentClass);
+  thisTabContents.eq(thisElmIndex).addClass(currentClass);
+});
+
+jQuery('.js-link').on('click', function (e) {
+  e.stopPropagation();
+  e.preventDefault();
+  location.href = $(this).attr('data-url');
+})
+
+
+//ドロワーメニュー切り替え設定
+
+jQuery("#js-menu").click(function () {
+  $(this).toggleClass("active");
+  $("#js-nav").toggleClass("active");
+});
+
+
+//フリガナ自動入力
+
+//フリガナ自動入力
+jQuery(function () {
+  jQuery.fn.autoKana('#name1', '#name3', {
+    katakana: true  //true：カタカナ、false：ひらがな（デフォルト）
   });
-
-  $('.js-link').on('click', function (e) {
-    e.stopPropagation();
-    e.preventDefault();
-    location.href = $(this).attr('data-url');
-  })
-
-
-  //ドロワーメニュー切り替え設定
-
-  $("#js-menu").click(function () {
-    $(this).toggleClass("active");
-    $("#js-nav").toggleClass("active");
+  jQuery.fn.autoKana('#name2', '#name4', {
+    katakana: true  //true：カタカナ、false：ひらがな（デフォルト）
   });
 });
 
 
-$('a[href^="#"]').click(function () {
+//カートないの『会員登録して次への文字鉄変更』
+
+jQuery("#customer-info .to_reganddeliveryinfo_button").val("会員登録して進む");
+
+
+
+/*
+
+ANCHOR LIN PC and SP
+
+-------------------------------------*/
+
+
+jQuery('a[href^="#"]').click(function () {
   // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
   if (window.matchMedia("(max-width: 768px)").matches) {
     /* ウィンドウサイズが 768px以下の場合のコードをここに */

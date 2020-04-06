@@ -17,7 +17,7 @@
 </footer>
 </div>
 <!--  ./wrapper -->
-
-<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.35"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.autoKana.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?var=1.37"></script>
 <?php wp_footer();?>
 </body></html>

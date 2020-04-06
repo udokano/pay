@@ -15,9 +15,13 @@
 }
 
 .cart__area {
-    margin-top: 30px;
+    margin-top: 2.5rem;
 
-    /* カートページ */
+    .member_page_title, .cart_page_title {
+        padding-bottom: 0 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
     #cart {
         input.delButton {
             padding: 0.35rem .48rem .33rem;
@@ -53,6 +57,18 @@
                 td.aleft.productname {
                     @media (max-width: 767px) {
                         text-align: left !important;
+                    }
+                }
+
+                .num {
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
+                }
+
+                .productname {
+                    @media (max-width: 767px) {
+                        border-left: 1px solid #cecece;
                     }
                 }
 
@@ -94,6 +110,16 @@
     }
 
     /* 次へのボタン非表示 */
+
+    #customer-info {
+        .to_deliveryinfo_button {
+            display: none;
+        }
+
+        .to_reganddeliveryinfo_button {
+            background-color: $green;
+        }
+    }
 
     /*  #to__del {
          .to_deliveryinfo_button {
@@ -226,9 +252,112 @@
     }
 }
 
+/*
+
+クレジットカード入力画面モーダルスタイル
+
+------------------------------*/
+
+.customer_form#welcart {
+    font-size: .6rem;
+    margin-bottom: 1.8rem;
+
+    #cardno {
+        width: 62%;
+    }
+
+    #seccd {
+        width: 40%;
+    }
+
+    #cardno, #seccd {
+        padding: .6rem;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    #escott_card_change {
+        color: $pink;
+    }
+
+    select {
+        height: 1.98rem;
+    }
+
+    .attention {
+        font-size: .68rem;
+
+        @media (max-width: 767px) {
+            font-size: .5rem;
+            margin-top: .65rem;
+        }
+    }
+
+    tr {}
+
+    th, td {
+        vertical-align: middle;
+        padding: .78rem 0;
+
+        @media (max-width: 767px) {
+            display: block;
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    th {
+        font-size: .92rem;
+        text-align: left;
+
+        @media (min-width: 768px) {
+            width: 33%;
+        }
+
+        @media (max-width: 767px) {
+            padding-top: .65rem;
+        }
+    }
+
+    td {
+        @media (max-width: 767px) {
+            padding-bottom: .65rem;
+        }
+
+        p {
+            font-size: .92rem;
+
+            @media (min-width: 768px) {
+                padding-left: 1.9rem;
+            }
+        }
+    }
+}
+
+.settlement_form_send {
+    input[type="button"] {
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        font-size: .8rem;
+        padding: 0 1.27rem;
+        color: #fff;
+    }
+
+    #escott_token_cancel {
+        background-color: #666;
+    }
+
+    #escott_token_next {
+        background-color: $orange;
+    }
+}
+
 @media (max-width: 767px) {
     .cart__area {
-        margin-top: 116px;
+        margin-top: 5.5rem;
 
         .section__inner {
             width: 96%;
@@ -245,12 +374,23 @@
 
     #customer-info .customer_form input {
         width: 100% !important;
+        padding: .5rem !important;
+    }
+
+    #customer-info tr {
+        &:last-of-type {
+            border-bottom: 1px solid #e6e6e6;
+        }
     }
 
     #customer-info th, #customer-info td {
         padding: 12px 10px !important;
         text-align: center !important;
         vertical-align: middle !important;
+        display: block;
+        width: 100%;
+        text-align: left !important;
+        border-bottom: none;
     }
 
     #cart_table {
@@ -264,7 +404,7 @@
         tr {
             th, td {
                 width: 12% !important;
-                padding: 0;
+                padding: .5rem !important;
                 text-align: left !important;
                 white-space: normal !important;
             }
@@ -282,6 +422,7 @@
             }
 
             .action {
+                width: 20% !important;
                 text-align: center !important;
 
                 input[type="submit"] {

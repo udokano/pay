@@ -39,7 +39,7 @@ window.onpageshow = function() {
 </head>
 <body <?php body_class(); ?> id="front__page">
 <div class="wrapper">
-<form action="<?php echo USCES_CART_URL ?>" method="post" id="form">
+<form action="<?php usces_url('cart');?>" method="post" id="form">
   <header class="key__visual">
     <div class="content">
       <div class="key__visual__texts">
@@ -75,10 +75,6 @@ window.onpageshow = function() {
 
     ------------------->
 
-      <?php if (usces_is_login()): ?><!-- ログインしているときはパラメータ付与--><a href="<?php home_url('/'); ?>contact?simai=<?php usces_memberinfo('name1') ?><?php usces_memberinfo('name2');?>&num=<?php usces_memberinfo('ID');?>&mail=<?php usces_memberinfo('mailaddress1');?>">
-<!-- ログアウト時はエラーするのでパラメーター外す -->
-        <?php else: ?> <a href="<?php echo home_url('/');?>contact">
- <?php endif; ?>お問い合わせ</a>
 
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); usces_the_item("plan"); ?>

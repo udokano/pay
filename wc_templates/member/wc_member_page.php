@@ -1,12 +1,33 @@
 <?php
-/**
- * <meta content="charset=UTF-8">
- * @package Welcart
- * @subpackage Welcart Default Theme
- */
 get_header();
 ?>
+
+<script>
+jQuery(function(){
+//会員情報編集画面に、『氏名』『氏名カナ』『TEL』の値を飛ばす
+	const tel__num = $("#hidden__tel").val();
+	const name__value01 = $("#hidden__name01").val();
+	const name__value02 = $("#hidden__name02").val();
+	const name__value03 = $("#hidden__name03").val();
+	const name__value04 = $("#hidden__name04").val();
+	$("#tel").val(tel__num);
+	$("#name1").val(name__value01);
+	$("#name2").val(name__value02);
+	$("#name3").val(name__value03);
+	$("#name4").val(name__value04);
+
+});
+</script>
+
 <div id="content" class="two-column">
+<input type="hidden" id="hidden__tel" value="<?php usces_memberinfo("tel");?>">
+		<input type="hidden" id="hidden__name__full" value="<?php usces_the_member_name();?>">
+			<input type="hidden" id="hidden__mail" value="<?php usces_memberinfo('mailaddress1');?>">
+		<input type="hidden" id="hidden__name01" value="<?php usces_memberinfo("name1");?>">
+		<input type="hidden" id="hidden__name02" value="<?php usces_memberinfo("name2");?>">
+		<input type="hidden" id="hidden__name03" value="<?php usces_memberinfo("name3");?>">
+		<input type="hidden" id="hidden__name04" value="<?php usces_memberinfo("name4");?>">
+		<input type="hidden" id="hidden__pass01" value="<?php usces_memberinfo("password1");?>">
   <div class="catbox">
     <section class="cart__area">
       <div class="section__inner">
@@ -24,24 +45,18 @@ get_header();
                       <th scope="row"><?php _e('member number', 'usces'); ?></th>
                       <td class="num"><?php usces_memberinfo('ID'); ?></td>
                       <!-- 	<td rowspan="3">&nbsp;</td> -->
-                      <th><?php _e('Strated date', 'usces'); ?></th>
-                      <td><?php usces_memberinfo('registered'); ?></td>
+                      <th rowspan="3" class="member__num"><?php _e('Strated date', 'usces'); ?></th>
+                      <td rowspan="3" class="member__num"><?php usces_memberinfo('registered'); ?></td>
                     </tr>
                     <tr>
                       <th scope="row"><?php _e('Full name', 'usces'); ?></th>
                       <td><?php esc_html_e(sprintf(_x('%s', 'honorific', 'usces'), usces_localized_name(usces_memberinfo('name1', 'return'), usces_memberinfo('name2', 'return'), 'return'))); ?></td>
-                      <?php if (usces_is_membersystem_point()) : ?>
-                      <th><?php _e('The current point', 'usces'); ?></th>
-                      <td class="num"><?php usces_memberinfo('point'); ?></td>
-                      <?php else : ?>
-                      <th>&nbsp;</th>
-                      <td class="num">&nbsp;</td>
-                      <?php endif; ?>
+
                     </tr>
                     <tr>
                       <th scope="row"><?php _e('e-mail adress', 'usces'); ?></th>
                       <td><?php usces_memberinfo('mailaddress1'); ?></td>
-                      <?php $html_reserve = '<th>&nbsp;</th><td>&nbsp;</td>'; ?>
+
                       <?php echo apply_filters('usces_filter_memberinfo_page_reserve', $html_reserve, usces_memberinfo('ID', 'return')); ?> </tr>
                   </table>
                   <ul class="member_submenu">
@@ -67,7 +82,7 @@ get_header();
                   <div class="error_message">
                     <?php usces_error_message(); ?>
                   </div>
-                  <form action="<?php usces_url('member'); ?>#edit" method="post" onKeyDown="if (event.keyCode == 13) {return false;}">
+                  <form action="<?php usces_url('member'); ?>#edit" method="post" onKeyDown="if (event.keyCode == 13) {return false;}" id="my__page__form">
                     <table class="customer_form" id="customer_form">
                       <?php uesces_addressform('member', usces_memberinfo(null), 'echo'); ?>
                       <tr>
@@ -98,14 +113,14 @@ get_header();
                     <?php do_action('usces_action_memberinfo_page_footer'); ?>
                   </div>
                 </div>
-                <!-- end of memberinfo --> 
+                <!-- end of memberinfo -->
               </div>
-              <!-- end of whitebox --> 
+              <!-- end of whitebox -->
             </div>
-            <!-- end of memberpages --> 
-            
+            <!-- end of memberpages -->
+
           </div>
-          <!-- end of entry --> 
+          <!-- end of entry -->
         </div>
         <!-- end of post -->
         <?php else: ?>
@@ -114,10 +129,10 @@ get_header();
         </p>
         <?php endif; ?>
       </div>
-      <!-- ./section__inner --> 
+      <!-- ./section__inner -->
     </section>
   </div>
-  <!-- end of catbox --> 
+  <!-- end of catbox -->
 </div>
 <!-- end of content -->
 

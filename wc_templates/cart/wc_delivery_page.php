@@ -51,9 +51,7 @@ get_header();
 				</table>
 				<?php do_action('usces_action_delivery_flag'); ?>
 
-				<table class="customer_form" id="delivery_table">
-			<?php echo uesces_addressform('delivery', $usces_entries); ?>
-				</table>
+
 				<table class="customer_form" id="time">
 					<tr style="display: none;">
 						<th scope="row"><?php _e('shipping option', 'usces'); ?></th>

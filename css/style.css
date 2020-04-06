@@ -338,6 +338,7 @@ h3 {
 
 .path li:last-of-type {
   margin: 0;
+  padding-right: 0;
 }
 
 @media (max-width: 767px) {
@@ -887,6 +888,10 @@ h3 {
   vertical-align: middle;
 }
 
+#site__header .header__inner {
+  height: 100%;
+}
+
 #site__header .header__inner .header__logo {
   padding: 1.1rem 0;
   width: 560px;
@@ -896,6 +901,7 @@ h3 {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
+  line-height: 1;
 }
 
 #site__header .header__nav ul {
@@ -937,7 +943,6 @@ h3 {
   }
   #site__header .header__inner .header__logo a {
     font-size: .8rem;
-    line-height: 1;
   }
   #site__header .menu-trigger,
   #site__header .menu-trigger span {
@@ -1658,8 +1663,7 @@ textarea {
 }
 
 .cart__area {
-  margin-top: 30px;
-  /* カートページ */
+  margin-top: 2.5rem;
   /* お客様情報入力ページ */
   /* 次へのボタン非表示 */
   /*  #to__del {
@@ -1667,6 +1671,11 @@ textarea {
              display: none;
          }
      } */
+}
+
+.cart__area .member_page_title, .cart__area .cart_page_title {
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 0 !important;
 }
 
 .cart__area #cart input.delButton {
@@ -1708,6 +1717,18 @@ textarea {
   }
 }
 
+@media (max-width: 767px) {
+  .cart__area #cart table tr .num {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart__area #cart table tr .productname {
+    border-left: 1px solid #cecece;
+  }
+}
+
 .cart__area #cart table tr .price__txt {
   font-size: 1.18rem;
   font-weight: 600;
@@ -1735,6 +1756,14 @@ textarea {
 .cart__area #customer-info table tr th input, .cart__area #customer-info table tr td input {
   font-size: .68rem;
   padding: 0.35rem .4rem;
+}
+
+.cart__area #customer-info .to_deliveryinfo_button {
+  display: none;
+}
+
+.cart__area #customer-info .to_reganddeliveryinfo_button {
+  background-color: #10a84c;
 }
 
 .cart__area #delivery-info table tr th, .cart__area #delivery-info table tr td {
@@ -1851,9 +1880,119 @@ textarea {
   font-weight: 600;
 }
 
+/*
+
+クレジットカード入力画面モーダルスタイル
+
+------------------------------*/
+.customer_form#welcart {
+  font-size: .6rem;
+  margin-bottom: 1.8rem;
+}
+
+.customer_form#welcart #cardno {
+  width: 62%;
+}
+
+.customer_form#welcart #seccd {
+  width: 40%;
+}
+
+.customer_form#welcart #cardno, .customer_form#welcart #seccd {
+  padding: .6rem;
+}
+
+@media (max-width: 767px) {
+  .customer_form#welcart #cardno, .customer_form#welcart #seccd {
+    width: 100%;
+  }
+}
+
+.customer_form#welcart #escott_card_change {
+  color: #ff4876;
+}
+
+.customer_form#welcart select {
+  height: 1.98rem;
+}
+
+.customer_form#welcart .attention {
+  font-size: .68rem;
+}
+
+@media (max-width: 767px) {
+  .customer_form#welcart .attention {
+    font-size: .5rem;
+    margin-top: .65rem;
+  }
+}
+
+.customer_form#welcart th, .customer_form#welcart td {
+  padding: .78rem 0;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .customer_form#welcart th, .customer_form#welcart td {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.customer_form#welcart th {
+  font-size: .92rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .customer_form#welcart th {
+    width: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .customer_form#welcart th {
+    padding-top: .65rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .customer_form#welcart td {
+    padding-bottom: .65rem;
+  }
+}
+
+.customer_form#welcart td p {
+  font-size: .92rem;
+}
+
+@media (min-width: 768px) {
+  .customer_form#welcart td p {
+    padding-left: 1.9rem;
+  }
+}
+
+.settlement_form_send input[type="button"] {
+  color: #fff;
+  font-size: .8rem;
+  height: 47px;
+  line-height: 47px;
+  padding: 0 1.27rem;
+  text-align: center;
+}
+
+.settlement_form_send #escott_token_cancel {
+  background-color: #666;
+}
+
+.settlement_form_send #escott_token_next {
+  background-color: #f07b60;
+}
+
 @media (max-width: 767px) {
   .cart__area {
-    margin-top: 116px;
+    margin-top: 5.5rem;
   }
   .cart__area .section__inner {
     width: 96%;
@@ -1862,12 +2001,20 @@ textarea {
     font-size: .7rem;
   }
   #customer-info .customer_form input {
+    padding: .5rem !important;
     width: 100% !important;
   }
+  #customer-info tr:last-of-type {
+    border-bottom: 1px solid #e6e6e6;
+  }
   #customer-info th, #customer-info td {
+    border-bottom: none;
+    display: block;
     padding: 12px 10px !important;
     text-align: center !important;
+    text-align: left !important;
     vertical-align: middle !important;
+    width: 100%;
   }
   #cart_table {
     -webkit-box-sizing: border-box;
@@ -1878,7 +2025,7 @@ textarea {
     width: 26% !important;
   }
   #cart_table tr th, #cart_table tr td {
-    padding: 0;
+    padding: .5rem !important;
     text-align: left !important;
     white-space: normal !important;
     width: 12% !important;
@@ -1894,6 +2041,7 @@ textarea {
   }
   #cart_table tr .action {
     text-align: center !important;
+    width: 20% !important;
   }
   #cart_table tr .action input[type="submit"] {
     font-size: .5rem;
@@ -2440,8 +2588,9 @@ textarea {
 
 @media (max-width: 767px) {
   .anchor__area .anchor__links li a {
-    font-size: .5rem;
+    font-size: .7rem;
     letter-spacing: 0;
+    padding: .25rem .1rem .95rem;
   }
 }
 
@@ -2970,17 +3119,62 @@ textarea {
   line-height: 1.0;
 }
 
-#memberpages .member_submenu {
+#memberpages #memberinfo .member_submenu {
+  font-size: 0;
   text-align: center;
 }
 
-#memberpages .member_submenu li {
+@media (max-width: 767px) {
+  #memberpages #memberinfo .member_submenu {
+    padding: 0;
+  }
+}
+
+#memberpages #memberinfo .member_submenu li {
   display: inline-block;
 }
 
-#memberpages .member_submenu li a {
-  color: #ff4876;
-  font-size: .95rem;
+#memberpages #memberinfo .member_submenu a {
+  color: #fff;
+  display: block;
+  font-size: .78rem;
+}
+
+#memberpages #memberinfo .member_submenu li, #memberpages #memberinfo .member_submenu .gotoedit {
+  display: inline-block;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 .85rem;
+}
+
+@media (max-width: 767px) {
+  #memberpages #memberinfo .member_submenu li, #memberpages #memberinfo .member_submenu .gotoedit {
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    margin: 0 auto .9rem;
+    max-width: 380px;
+    padding: 0;
+    width: 60%;
+  }
+}
+
+#memberpages #memberinfo .member_submenu li.edit_member {
+  background-color: #f07b60;
+}
+
+#memberpages #memberinfo .member_submenu li.logout_member {
+  background-color: #666;
+}
+
+#memberpages #memberinfo .member_submenu .gotoedit {
+  background-color: #10a84c;
+}
+
+@media (min-width: 768px) {
+  #memberpages #memberinfo .member_submenu .gotoedit {
+    margin: 0 .98rem;
+  }
 }
 
 #newmember .header_explanation {
@@ -3021,8 +3215,45 @@ textarea {
   vertical-align: middle;
 }
 
-/* ログインページテーブル */
+/* 入会フォームスタイル調整 */
+#new__member__form .send {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  #new__member__form .customer_form tr th, #new__member__form .customer_form tr td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+#new__member__form .customer_form tr th {
+  color: #454545;
+  font-size: .9rem;
+}
+
+@media (max-width: 767px) {
+  #new__member__form .customer_form tr th {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #new__member__form .customer_form tr:last-of-type td {
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+
+#new__member__form input[type="submit"] {
+  width: 220px;
+}
+
+/* マイページスタイル */
 #memberinfo {
+  /* メンバー情報のテーブル */
+  /* 購入履歴のテーブル */
+  /* 注文番号などの情報が書いてあるテーブル */
   /*   .back__to__btn {
        background-color: $yellow;
    }
@@ -3030,7 +3261,7 @@ textarea {
 }
 
 #memberinfo h3 {
-  background-color: #f77943;
+  background-color: #4c94e1;
   border: none;
   font-size: 1.08rem;
   height: auto;
@@ -3040,7 +3271,7 @@ textarea {
 }
 
 #memberinfo #member__info__table {
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.9rem;
 }
 
 #memberinfo #member__info__table tr th, #memberinfo #member__info__table tr td {
@@ -3050,8 +3281,54 @@ textarea {
 
 @media (max-width: 767px) {
   #memberinfo #member__info__table tr th, #memberinfo #member__info__table tr td {
-    padding: .4rem .2rem !important;
+    border-bottom: none;
+    display: block;
+    font-size: .88rem !important;
+    padding: .9rem .8rem !important;
+    width: 100%;
   }
+}
+
+#memberinfo #member__info__table tr th {
+  color: #454545;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  #memberinfo #member__info__table tr .member__num {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #memberinfo #member__info__table tr:last-of-type {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+#memberinfo .history-area {
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  #memberinfo #history_head tr th, #memberinfo #history_head tr td {
+    /* display: block;
+                    width: 100%; */
+  }
+}
+
+#memberinfo #history_head tr th {
+  background-color: #545353;
+}
+
+#memberinfo #history_head tr .retail {
+  border-bottom: none;
+  padding: .88rem 0 !important;
+}
+
+#memberinfo #history_head tr .retail a {
+  color: #f07b60;
+  font-weight: 600;
 }
 
 #memberinfo table {
@@ -3072,7 +3349,7 @@ textarea {
 
 #memberinfo table tr td, #memberinfo table tr th {
   font-size: 0.88rem !important;
-  padding: .4rem !important;
+  padding: .8rem !important;
   text-align: center;
   vertical-align: middle;
 }
@@ -3080,7 +3357,17 @@ textarea {
 @media (max-width: 767px) {
   #memberinfo table tr td, #memberinfo table tr th {
     font-size: .6rem !important;
-    padding: .35rem .38rem !important;
+    padding: .48rem .38rem !important;
+  }
+}
+
+#memberinfo table tr th.subtotal {
+  width: 19.7%;
+}
+
+@media (min-width: 768px) {
+  #memberinfo table tr td.ssubtotal {
+    font-size: 1.02rem !important;
   }
 }
 
@@ -3089,7 +3376,7 @@ textarea {
 }
 
 #memberinfo table tbody tr {
-  /* 領主書ダウンロード横の隙間削除 */
+  /* 領収書ダウンロード横の隙間削除 */
 }
 
 #memberinfo table tbody tr td.retail:last-of-type {
@@ -3101,16 +3388,50 @@ textarea {
 }
 
 #memberinfo #customer_form tr td, #memberinfo #customer_form tr th {
-  padding: .4rem .35rem !important;
+  font-size: 0.7rem !important;
+  padding: .4rem .6rem !important;
   text-align: left !important;
+}
+
+@media (max-width: 767px) {
+  #memberinfo #customer_form tr td, #memberinfo #customer_form tr th {
+    border-bottom: none;
+    display: block;
+    padding: 0.99rem 0.77rem 1.2rem !important;
+    width: 100%;
+  }
 }
 
 #memberinfo #customer_form tr td input, #memberinfo #customer_form tr th input {
   width: 100%;
 }
 
-#memberinfo #customer_form tr td input.w50, #memberinfo #customer_form tr td #tel, #memberinfo #customer_form tr th input.w50, #memberinfo #customer_form tr th #tel {
-  width: 50%;
+@media (min-width: 768px) {
+  #memberinfo #customer_form tr td input.w50, #memberinfo #customer_form tr td #tel, #memberinfo #customer_form tr th input.w50, #memberinfo #customer_form tr th #tel {
+    width: 50%;
+  }
+}
+
+#memberinfo #customer_form tr th {
+  color: #454545;
+}
+
+@media (min-width: 768px) {
+  #memberinfo #customer_form tr th {
+    width: 18%;
+  }
+}
+
+@media (max-width: 767px) {
+  #memberinfo #customer_form tr th {
+    font-size: .92rem !important;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+#memberinfo #customer_form tr:last-of-type td {
+  border-bottom: 1px solid #e6e6e6;
 }
 
 #memberinfo .reave__btn {
@@ -3121,6 +3442,96 @@ textarea {
   font-size: .8rem;
   margin-bottom: .8rem;
   padding: .7rem .72rem;
+}
+
+#memberinfo .send input[name="editmember"] {
+  background-color: #10a84c;
+}
+
+/*
+
+クレジットカード登録・変更画面
+
+--------------------------------*/
+#wc_member_update_settlement {
+  margin: 30px auto 0;
+  max-width: 1100px;
+  text-align: center;
+}
+
+#wc_member_update_settlement .whitebox {
+  margin: auto;
+  max-width: 680px;
+}
+
+#wc_member_update_settlement p {
+  margin-bottom: 1.2rem;
+}
+
+#wc_member_update_settlement table#welcart th, #wc_member_update_settlement table#welcart td {
+  padding: .85rem .88rem !important;
+  text-align: left;
+}
+
+#wc_member_update_settlement table#welcart th {
+  font-size: .78rem !important;
+}
+
+@media (min-width: 768px) {
+  #wc_member_update_settlement table#welcart th {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  #wc_member_update_settlement table#welcart th {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+#wc_member_update_settlement table#welcart td {
+  font-size: .66rem !important;
+}
+
+@media (max-width: 767px) {
+  #wc_member_update_settlement table#welcart td {
+    border: none;
+  }
+}
+
+#wc_member_update_settlement table#welcart td p {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+#wc_member_update_settlement #member-card-info .send input[type="button"] {
+  background-color: #777;
+  color: #fff;
+  display: inline-block;
+  height: 53px;
+  line-height: 53px;
+  padding: 0 .98rem;
+}
+
+@media (max-width: 767px) {
+  #wc_member_update_settlement #member-card-info .send input[type="button"] {
+    display: block;
+    margin: 0 auto .98rem;
+    width: 73%;
+  }
+}
+
+#wc_member_update_settlement #member-card-info .send input[name="back"] {
+  background-color: #dea324;
+}
+
+#wc_member_update_settlement #member-card-info .send #card-register, #wc_member_update_settlement #member-card-info .send #card-update {
+  background-color: #f07b60;
+}
+
+#sidebar {
+  display: none;
 }
 
 section.pages {
@@ -3134,16 +3545,18 @@ section.pages h1 {
 
 section.pages p {
   font-size: .62rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.0rem;
 }
 
 @media (max-width: 767px) {
   section.pages {
+    margin-bottom: 0;
     margin-top: 1.5rem;
+    padding: 3.9rem 0 1.7rem;
   }
   section.pages h1 {
     margin-bottom: 0;
-    margin-top: 1.2rem;
+    margin-top: .7rem;
   }
 }
 
@@ -3179,6 +3592,13 @@ section.pages p {
   font-size: .9rem;
   margin-bottom: 1.3rem;
   padding: 1.5rem 1.8rem;
+}
+
+@media (max-width: 767px) {
+  .pr__trem .section__inner dl {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .pr__trem .section__inner dl dt {

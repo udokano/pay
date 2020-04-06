@@ -6,6 +6,7 @@
  */
 get_header();
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <div id="content" class="two-column">
 <div class="catbox">

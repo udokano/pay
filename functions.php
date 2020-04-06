@@ -485,8 +485,7 @@ function my_filter_member_history($out = '')
 				<tr class="order_head_label">
 				<th class="historyrow order_number">' . __('Order number', 'usces') . '</th>
 				<th class="historyrow purchase_date">' . __('Purchase date', 'usces') . '</th>
-				<th class="historyrow purchase_price">' . __('Purchase price', 'usces') . '</th>
-				<th class="historyrow discount">' . apply_filters('usces_member_discount_label', __('Discount', 'usces'), $umhs['ID']) . '</th>';
+				<th class="historyrow purchase_price">' . __('Purchase price', 'usces') . '</th>';
             if (usces_is_tax_display() && 'products' == usces_get_tax_target()) {
                 $history_member_head .= '<th class="historyrow tax">' . usces_tax_label(array(), 'return') . '</th>';
             }
@@ -512,8 +511,7 @@ function my_filter_member_history($out = '')
 				<tr class="order_head_value">
 				<td class="order_number">' . usces_get_deco_order_id($umhs['ID']) . '</td>
 				<td class="date purchase_date">' . $umhs['date'] . '</td>
-				<td class="purchase_price">' . usces_crform($total_price, true, false, 'return') . '</td>
-				<td class="discount">' . usces_crform($umhs['discount'], true, false, 'return') . '</td>';
+				<td class="purchase_price">' . usces_crform($total_price, true, false, 'return') . '</td>';
             if (usces_is_tax_display() && 'products' == usces_get_tax_target()) {
                 $history_member_head .= '<td class=" tax">' . usces_tax($umhs, 'return') . '</td>';
             }
@@ -584,7 +582,7 @@ function my_filter_member_history($out = '')
                 $optstr = apply_filters('usces_filter_option_info_history', $optstr, $umhs, $cart_row, $i);
                 $args = compact('cart', 'i', 'cart_row', 'post_id', 'sku');
 
-                $cart_item_name = '<a href="' . get_permalink($post_id) . '">' . apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args) . '<br />' . $optstr . '</a>' . apply_filters('usces_filter_history_item_name', null, $umhs, $cart_row, $i);
+                $cart_item_name = apply_filters('usces_filter_cart_item_name', esc_html($cartItemName), $args) . '<br />' . $optstr  . apply_filters('usces_filter_history_item_name', null, $umhs, $cart_row, $i);
                 $cart_item_name = apply_filters('usces_filter_history_cart_item_name', $cart_item_name, $cartItemName, $optstr, $cart_row, $i, $umhs);
 
 

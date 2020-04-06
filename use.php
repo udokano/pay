@@ -102,10 +102,11 @@ Template Name: ご利用方法
                   <img src="<?php echo get_template_directory_uri(); ?>/img/use/flow04.jpg" alt="会員登録">
                 </div><!-- ./thumb -->
                 <div class="steps__text">
-                  <h3 class="steps__tit"><span>STEP4.</span>お支払い情報</h3>
+                  <h3 class="steps__tit"><span>STEP4.</span>クレジットカード登録</h3>
                   <p>お支払い方法に関しては、<br>今回の定額サービスにおいては<span class="fw600">クレジットカード</span>のみとなりますので、<br class="pc">支払方法をクレジットカードに選択します。</p>
                   <p>備考欄に何かご記入したい点などがございましたら、<br>ご記入ください。</p>
-                  <p>その後、『次へ』ボタンをクリックください。</p>
+                  <p>その後、『次へ』ボタンをクリックすると、クレジットカード情報の入力ボックスが表示されます。<br>そこで、カード情報を入力していただき、<br>カード情報を入力したらボックス内の『次へ』ボタンをクリックして、<br class="pc">お申し込み内容確認ページへ遷移します。</p>
+                  <p>※<a href="<?php echo home_url('/');?>usces-member" target="_blank">マイページ</a>にて、<br>事前にクレジットカードを登録することも可能です。</p>
                 </div><!-- .steps__text/ -->
               </div><!-- ./steps__bottom__content -->
           </div><!-- ./steps__inner -->
@@ -118,7 +119,7 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP5.</span>お申し込み内容確認</h3>
-                  <p>お申し込みした内容・会員登録の情報にお間違いがなければ、『上記内容で注文する』ボタンをクリックします。<br>クリックしたら、クレジットカードの決済画面に遷移するので、そこでカード番号を入力してクレジットカード決済をお願いします。</p>
+                  <p>お申し込みした内容・会員登録の情報にお間違いがなければ、『上記内容で注文する』ボタンをクリックします。<br>内容に相違がある場合は、『戻る』ボタンをクリックして内容を修正してください。</p>
                 </div><!-- .steps__text/ -->
               </div><!-- ./steps__bottom__content -->
           </div><!-- ./steps__inner -->
@@ -131,7 +132,7 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP6.</span>申し込み完了</h3>
-                  <p>クレジットカートの決済が終了したら、『ご注文内容の確認メール』が届きます。</p><p><span class="fw600">こちらのメールは、クリニックにご来院いただく際に、必要なものなので、大切に保存するようにお願い致します。</span></p>
+                  <p>クレジットカートの決済が終了したら、『ご注文内容の確認メール』が届きます。</p><p><span class="fw600">こちらのメールは、クリニックにご来院いただく際に、必要なものとなりますので、大切に保存するようにお願い致します。</span></p>
                   <p>また、クリニックの来院予約は<a href="https://connect-app.net/r_yag/reserve/top" target="_blank">こちらのサイト</a>から行うことが可能です。ご希望の日時・クリニックを選択してご予約くださいませ。</p>
                 </div><!-- .steps__text/ -->
               </div><!-- ./steps__bottom__content -->
@@ -193,15 +194,9 @@ Template Name: ご利用方法
               </div><!-- ./steps__bottom__content -->
           </div><!-- ./steps__inner -->
         </div><!-- ./floe__steps -->
-
     </li>
-
   </ul>
-
-
-
 </section>
-
 
  <div class="sub__tit" id="desc02">
     <h2 class="tc">ログイン・ログアウト方法</h2>
@@ -267,7 +262,7 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP3.</span>マイページへ移動</h3>
-                  <p>ログインできたら、マイページの画面に遷移します。<br>こちらでは、登録情報の確認・変更、注文履歴の確認が可能です。</p>
+                  <p>ログインできたら、マイページの画面に遷移します。<br>こちらでは、登録情報の確認・変更、注文内容の確認・クレジットカードの登録が可能です。</p>
                 </div><!-- .steps__text/ -->
              </div><!-- ./steps__bottom__content -->
           </div><!-- ./steps__inner -->
@@ -309,16 +304,13 @@ Template Name: ご利用方法
                 </div><!-- ./thumb -->
                 <div class="steps__text">
                   <h3 class="steps__tit"><span>STEP2.</span>ログアウトをクリック</h3>
-                  <p>マイページに移動したら、<br>『ログアウト』（ピンク色の文字列）をクリックします。<br>クリックしたら、ログアウトされます。</p>
+                  <p>マイページに移動したら、<br>『ログアウト』（グレーのボタン）をクリックします。<br>クリックしたら、ログアウトされます。</p>
               <!--     <span><span class="fw600">※本サービスを実施していないクリニックもあります。ご予約の際はご注意ください。</span></span> -->
                 </div><!-- .steps__text/ -->
              </div><!-- ./steps__bottom__content -->
           </div><!-- ./steps__inner -->
         </div><!-- ./floe__steps -->
-
-
     </li>
-
   </ul>
 
 
